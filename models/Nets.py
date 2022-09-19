@@ -8,10 +8,18 @@ import torch.nn.functional as F
 
 
 class MLP(nn.Module):
+    # init函数的三个参数分别为神经网络的三层 输入层 隐藏层 和 输出层
+    # 输入层是 1*28*28
+    # 隐藏层是 200
+    # 输出是10
     def __init__(self, dim_in, dim_hidden, dim_out):
         super(MLP, self).__init__()
         self.layer_input = nn.Linear(dim_in, dim_hidden)
+        # 激励函数
         self.relu = nn.ReLU()
+        # dropout是一个全新的概念，他的意思是：如果当前的神经网络很复杂，但是训练集又比较小的时候，这个时候容易发生过拟合的情况
+        # 那么为了避免这个情况，这个时候就可以使用dropout的形式来提高神经网络的性能
+        # 这里的dropout的是指：组织神经特征检测器的共同作用，也就是说在这里面隐藏层又200个特征，但是我们可以每次随机的让一些特征不起作用，来达到防止过拟合
         self.dropout = nn.Dropout()
         self.layer_hidden = nn.Linear(dim_hidden, dim_out)
 
