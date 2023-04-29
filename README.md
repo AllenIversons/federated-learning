@@ -6,8 +6,10 @@ Only experiments on MNIST and CIFAR10 (both IID and non-IID) is produced by far.
 Note: The scripts will be slow without the implementation of parallel computing. 
 
 ## Requirements
-python>=3.6  
-pytorch>=0.4
+python>=3.7  
+pytorch>=1.4.0
+
+`Note: The Conda environment is fl`
 
 ## Run
 
@@ -53,5 +55,4 @@ McMahan, Brendan, Eider Moore, Daniel Ramage, Seth Hampson, and Blaise Aguera y 
 
 ## Cite As
 Shaoxiong Ji. (2018, March 30). A PyTorch Implementation of Federated Learning. Zenodo. http://doi.org/10.5281/zenodo.4321561
-
 
