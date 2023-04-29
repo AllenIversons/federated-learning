@@ -14,7 +14,7 @@ from torchvision import datasets, transforms
 
 from utils.options import args_parser
 from models.Nets import MLP, CNNMnist, CNNCifar
-
+from utils import save_results
 
 def test(net_g, data_loader):
     # testing
@@ -92,7 +92,7 @@ if __name__ == '__main__':
             optimizer.step()
             if batch_idx % 50 == 0:
                 print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
-                    epoch, batch_idx * len(data), len(train_loader.dataset),
+                    epoch+1, batch_idx * len(data), len(train_loader.dataset),
                            100. * batch_idx / len(train_loader), loss.item()))
             batch_loss.append(loss.item())
         loss_avg = sum(batch_loss)/len(batch_loss)
@@ -105,7 +105,8 @@ if __name__ == '__main__':
     plt.xlabel('epochs')
     plt.ylabel('train loss')
     plt.savefig('./log/nn_{}_{}_{}.png'.format(args.dataset, args.model, args.epochs))
-
+    #保存结果到csv文件
+    save_results(list_loss, "fed_loss_result")
     # testing
     if args.dataset == 'mnist':
         dataset_test = datasets.MNIST('./data/mnist/', train=False, download=True,
