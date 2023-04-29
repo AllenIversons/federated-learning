@@ -3,6 +3,7 @@
 # Python version: 3.6
 
 import matplotlib
+from loguru import logger
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
@@ -15,6 +16,7 @@ from torchvision import datasets, transforms
 from utils.options import args_parser
 from models.Nets import MLP, CNNMnist, CNNCifar
 from utils import save_results
+from utils import generate_experiment_ids
 
 def test(net_g, data_loader):
     # testing
@@ -38,6 +40,13 @@ def test(net_g, data_loader):
 
 
 if __name__ == '__main__':
+    # # Initialize logger
+    files = generate_experiment_ids(3000, 1)
+
+    # Initialize logger
+    # 把实验的日志存储到该文件中
+    handler = logger.add(files[0][0], enqueue=True)
+
     # parse args
     args = args_parser()
     args.device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
@@ -73,9 +82,9 @@ if __name__ == '__main__':
         net_glob = MLP(dim_in=len_in, dim_hidden=64, dim_out=args.num_classes).to(args.device)
     else:
         exit('Error: unrecognized model')
-    print(net_glob)
+    logger.info("Model : {}".format(net_glob))
     params_dict = net_glob.state_dict()
-    print("模型参数",params_dict)
+    # print("模型参数",params_dict)
 
     # training
     optimizer = optim.SGD(net_glob.parameters(), lr=args.lr, momentum=args.momentum)
@@ -83,6 +92,7 @@ if __name__ == '__main__':
 
     list_loss = []
     net_glob.train()
+    logger.info("The epochs of training is : {}".format(args.epochs))
     for epoch in range(args.epochs):
         batch_loss = []
         for batch_idx, (data, target) in enumerate(train_loader):
@@ -95,12 +105,15 @@ if __name__ == '__main__':
             optimizer.step()
             # print("更新后的模型梯度信息：", net_glob.parameters().__next__().grad)
             if batch_idx % 50 == 0:
-                print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+                logger.info("Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}".format(
                     epoch+1, batch_idx * len(data), len(train_loader.dataset),
                            100. * batch_idx / len(train_loader), loss.item()))
+                # print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+                #     epoch+1, batch_idx * len(data), len(train_loader.dataset),
+                #            100. * batch_idx / len(train_loader), loss.item()))
             batch_loss.append(loss.item())
         loss_avg = sum(batch_loss)/len(batch_loss)
-        print('\nTrain loss:', loss_avg)
+        logger.info("Train loss:{:.6f}".format(loss_avg))
         list_loss.append(loss_avg)
 
     # plot loss
@@ -127,6 +140,7 @@ if __name__ == '__main__':
         test_loader = DataLoader(dataset_test, batch_size=1000, shuffle=False)
     else:
         exit('Error: unrecognized dataset')
+
 
     print('test on', len(dataset_test), 'samples')
     test_acc, test_loss = test(net_glob, test_loader)
