@@ -74,6 +74,8 @@ if __name__ == '__main__':
     else:
         exit('Error: unrecognized model')
     print(net_glob)
+    params_dict = net_glob.state_dict()
+    print("模型参数",params_dict)
 
     # training
     optimizer = optim.SGD(net_glob.parameters(), lr=args.lr, momentum=args.momentum)
@@ -88,8 +90,10 @@ if __name__ == '__main__':
             optimizer.zero_grad()
             output = net_glob(data)
             loss = F.cross_entropy(output, target)
+            # print("更新前的模型梯度信息：", net_glob.parameters().__next__().grad)
             loss.backward()
             optimizer.step()
+            # print("更新后的模型梯度信息：", net_glob.parameters().__next__().grad)
             if batch_idx % 50 == 0:
                 print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
                     epoch+1, batch_idx * len(data), len(train_loader.dataset),

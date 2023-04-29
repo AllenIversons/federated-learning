@@ -9,7 +9,13 @@ import numpy as np
 import random
 from sklearn import metrics
 
-
+# 用于将全局数据集划分为多个本地数据集，并将每个本地数据集分配给不同的客户端
+"""
+    在这里创建了一个DatasetSplit类，其继承自Dataset类
+    DatasetSplit 类接受两个参数，分别是原始数据集 dataset 和一个样本索引列表 idxs。
+    在初始化时，它会将 idxs 转换为 Python 中的列表类型，并保存到对象属性 self.idxs 中。
+    在获取数据时，它会根据索引列表 self.idxs 从原始数据集中选择对应的数据项，然后返回图像和标签作为模型输入。
+"""
 class DatasetSplit(Dataset):
     def __init__(self, dataset, idxs):
         self.dataset = dataset

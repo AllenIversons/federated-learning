@@ -17,6 +17,7 @@ from models.Update import LocalUpdate
 from models.Nets import MLP, CNNMnist, CNNCifar
 from models.Fed import FedAvg
 from models.test import test_img
+from utils import save_results
 
 
 if __name__ == '__main__':
@@ -33,6 +34,10 @@ if __name__ == '__main__':
         dataset_train = datasets.MNIST('../data/mnist/', train=True, download=True, transform=trans_mnist)
         dataset_test = datasets.MNIST('../data/mnist/', train=False, download=True, transform=trans_mnist)
         # sample users 数据分发
+        """
+            对数据集进行拆分，每个用户拥有数据集的一部分，最后得出一个dict_users列表，len(dict_users)为args.num_users
+            dict_users[0]表示：索引为0的客户端中图片的索引列表
+        """
         if args.iid:
             # 客户端之间的数据可能是独立同分布（IID），也可能是非独立同分布的（Non-IID）
             dict_users = mnist_iid(dataset_train, args.num_users)
@@ -43,6 +48,10 @@ if __name__ == '__main__':
             # pdb 是python自带的一个包，为python程序提供了一种交互的源代码调试功能
             # 主要特性包括设置断点，单步调试，进入函数调试，查看当前代码，查看栈片段，动态改变变量的值等
             pdb.set_trace()
+
+        # print("客户端数量",args.num_users)
+        # print("dict_users长度",len(dict_users))
+        # print("第一个元素长度",len(dict_users[0]))
 
     elif args.dataset == 'cifar':
         trans_cifar = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
@@ -78,7 +87,7 @@ if __name__ == '__main__':
     net_glob.train()
 
     # copy weights 然后将net_glob的参数 复制给 w_glob
-    # net_glob中的state_dict变量存放驯良过程中需要学习的权重和偏置系数
+    # net_glob中的state_dict变量存放训练过程中需要学习的权重和偏置系数
     w_glob = net_glob.state_dict()
 
     # training
@@ -97,6 +106,7 @@ if __name__ == '__main__':
         # 在每一个epoch都要进行如下的操作
         # 首先定义一个client的损失函数
         loss_locals = []
+        # 用于控制客户端是否全部参与联邦学习。如果未指定该参数，则默认为假（即只选择一部分客户端参与训练）
         if not args.all_clients:
             w_locals = []
         # m代表者随机抽取本地参与模型训练的client个数
@@ -104,7 +114,20 @@ if __name__ == '__main__':
         # 2 如果所有用户同时训练的情况下，并不能够保证所有用户在同一时刻都是在线的状态
         m = max(int(args.frac * args.num_users), 1) # args.frac * args.num_users = 0.1 * 100 = 10
         idxs_users = np.random.choice(range(args.num_users), m, replace=False)
+
+        """
+            idxs_users 为 选出的 可以参与联邦训练的参与者列表
+            接下来根据idxs_users这个列表开始操作，len(idxs_users)为 m
+            例如, idxs_users = [3,5,9,11,22,44,56,78,....,89] 
+            依次遍历 idxs_users，以idxs_users中的第一个元素idxs_users[0] = 3 为例
+            dict_users[3]表示 客户端索引为3的 数据样本的索引，这里面都是一些数据样本的索引
+            然后生成LocalUpdate实例，在这个过程中，还会调用DatasetSplit(dataset, idxs)类
+            根据dict_users[3]中的索引来对整个训练集进行划分，也就是根据dict_users[3]中的索引，来对
+            完整的训练集进行抽样，形成某一个客户端的本地数据集
+        """
         for idx in idxs_users:
+
+            # 生成一个LocalUpdate实例，主要完成数据集划分的工作
             local = LocalUpdate(args=args, dataset=dataset_train, idxs=dict_users[idx])
             # 训练完之后返回 w 和loss
             w, loss = local.train(net=copy.deepcopy(net_glob).to(args.device))
@@ -125,7 +148,7 @@ if __name__ == '__main__':
 
         # print loss
         loss_avg = sum(loss_locals) / len(loss_locals)
-        print('Round {:3d}, Average loss {:.3f}'.format(iter, loss_avg))
+        print('Round {:3d}, Average loss {:.3f}'.format(iter+1, loss_avg))
         # 将每一个epoch的损失记录下来
         loss_train.append(loss_avg)
 
@@ -134,6 +157,9 @@ if __name__ == '__main__':
     plt.plot(range(len(loss_train)), loss_train)
     plt.ylabel('train_loss')
     plt.savefig('./save/fed_{}_{}_{}_C{}_iid{}.png'.format(args.dataset, args.model, args.epochs, args.frac, args.iid))
+
+    # 保存结果到csv文件
+    save_results(loss_train, "fed_loss_result")
 
     # testing
     net_glob.eval()
