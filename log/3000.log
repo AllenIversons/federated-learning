@@ -1,0 +1,881 @@
+2023-04-30 11:18:21.306 | INFO     | __main__:<module>:91 - Model : CNNMnist(
+  (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
+  (conv2): Conv2d(10, 20, kernel_size=(5, 5), stride=(1, 1))
+  (conv2_drop): Dropout2d(p=0.5, inplace=False)
+  (fc1): Linear(in_features=320, out_features=50, bias=True)
+  (fc2): Linear(in_features=50, out_features=10, bias=True)
+)
+2023-04-30 11:18:21.308 | INFO     | __main__:<module>:114 - The epochs of training is : 200
+2023-04-30 11:18:21.309 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[67 33 45 81  7 93 84  9 49 92]
+2023-04-30 11:18:21.312 | INFO     | models.Update:train:50 - Client #67 for epoch #0 of local training
+2023-04-30 11:18:21.678 | INFO     | models.Update:train:50 - Client #67 for epoch #1 of local training
+2023-04-30 11:18:22.017 | INFO     | models.Update:train:50 - Client #67 for epoch #2 of local training
+2023-04-30 11:18:22.366 | INFO     | models.Update:train:50 - Client #67 for epoch #3 of local training
+2023-04-30 11:18:22.699 | INFO     | models.Update:train:50 - Client #67 for epoch #4 of local training
+2023-04-30 11:18:23.037 | INFO     | models.Update:train:50 - Client #33 for epoch #0 of local training
+2023-04-30 11:18:23.376 | INFO     | models.Update:train:50 - Client #33 for epoch #1 of local training
+2023-04-30 11:18:23.714 | INFO     | models.Update:train:50 - Client #33 for epoch #2 of local training
+2023-04-30 11:18:24.050 | INFO     | models.Update:train:50 - Client #33 for epoch #3 of local training
+2023-04-30 11:18:24.385 | INFO     | models.Update:train:50 - Client #33 for epoch #4 of local training
+2023-04-30 11:18:24.724 | INFO     | models.Update:train:50 - Client #45 for epoch #0 of local training
+2023-04-30 11:18:25.062 | INFO     | models.Update:train:50 - Client #45 for epoch #1 of local training
+2023-04-30 11:18:25.398 | INFO     | models.Update:train:50 - Client #45 for epoch #2 of local training
+2023-04-30 11:18:25.729 | INFO     | models.Update:train:50 - Client #45 for epoch #3 of local training
+2023-04-30 11:18:26.066 | INFO     | models.Update:train:50 - Client #45 for epoch #4 of local training
+2023-04-30 11:18:26.403 | INFO     | models.Update:train:50 - Client #81 for epoch #0 of local training
+2023-04-30 11:18:26.738 | INFO     | models.Update:train:50 - Client #81 for epoch #1 of local training
+2023-04-30 11:18:27.075 | INFO     | models.Update:train:50 - Client #81 for epoch #2 of local training
+2023-04-30 11:18:27.412 | INFO     | models.Update:train:50 - Client #81 for epoch #3 of local training
+2023-04-30 11:18:27.750 | INFO     | models.Update:train:50 - Client #81 for epoch #4 of local training
+2023-04-30 11:18:28.254 | INFO     | models.Update:train:50 - Client #7 for epoch #0 of local training
+2023-04-30 11:18:28.593 | INFO     | models.Update:train:50 - Client #7 for epoch #1 of local training
+2023-04-30 11:18:28.931 | INFO     | models.Update:train:50 - Client #7 for epoch #2 of local training
+2023-04-30 11:18:29.271 | INFO     | models.Update:train:50 - Client #7 for epoch #3 of local training
+2023-04-30 11:18:29.609 | INFO     | models.Update:train:50 - Client #7 for epoch #4 of local training
+2023-04-30 11:18:29.944 | INFO     | models.Update:train:50 - Client #93 for epoch #0 of local training
+2023-04-30 11:18:30.286 | INFO     | models.Update:train:50 - Client #93 for epoch #1 of local training
+2023-04-30 11:18:30.628 | INFO     | models.Update:train:50 - Client #93 for epoch #2 of local training
+2023-04-30 11:18:30.964 | INFO     | models.Update:train:50 - Client #93 for epoch #3 of local training
+2023-04-30 11:18:31.303 | INFO     | models.Update:train:50 - Client #93 for epoch #4 of local training
+2023-04-30 11:18:31.642 | INFO     | models.Update:train:50 - Client #84 for epoch #0 of local training
+2023-04-30 11:18:31.978 | INFO     | models.Update:train:50 - Client #84 for epoch #1 of local training
+2023-04-30 11:18:32.316 | INFO     | models.Update:train:50 - Client #84 for epoch #2 of local training
+2023-04-30 11:18:32.653 | INFO     | models.Update:train:50 - Client #84 for epoch #3 of local training
+2023-04-30 11:18:32.993 | INFO     | models.Update:train:50 - Client #84 for epoch #4 of local training
+2023-04-30 11:18:33.331 | INFO     | models.Update:train:50 - Client #9 for epoch #0 of local training
+2023-04-30 11:18:33.675 | INFO     | models.Update:train:50 - Client #9 for epoch #1 of local training
+2023-04-30 11:18:34.016 | INFO     | models.Update:train:50 - Client #9 for epoch #2 of local training
+2023-04-30 11:18:34.359 | INFO     | models.Update:train:50 - Client #9 for epoch #3 of local training
+2023-04-30 11:18:34.701 | INFO     | models.Update:train:50 - Client #9 for epoch #4 of local training
+2023-04-30 11:18:35.040 | INFO     | models.Update:train:50 - Client #49 for epoch #0 of local training
+2023-04-30 11:18:35.378 | INFO     | models.Update:train:50 - Client #49 for epoch #1 of local training
+2023-04-30 11:18:35.713 | INFO     | models.Update:train:50 - Client #49 for epoch #2 of local training
+2023-04-30 11:18:36.054 | INFO     | models.Update:train:50 - Client #49 for epoch #3 of local training
+2023-04-30 11:18:36.392 | INFO     | models.Update:train:50 - Client #49 for epoch #4 of local training
+2023-04-30 11:18:36.732 | INFO     | models.Update:train:50 - Client #92 for epoch #0 of local training
+2023-04-30 11:18:37.079 | INFO     | models.Update:train:50 - Client #92 for epoch #1 of local training
+2023-04-30 11:18:37.422 | INFO     | models.Update:train:50 - Client #92 for epoch #2 of local training
+2023-04-30 11:18:37.766 | INFO     | models.Update:train:50 - Client #92 for epoch #3 of local training
+2023-04-30 11:18:38.113 | INFO     | models.Update:train:50 - Client #92 for epoch #4 of local training
+2023-04-30 11:18:38.454 | INFO     | __main__:<module>:160 - Round   1, Average loss 1.609
+2023-04-30 11:18:38.455 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[45 19 72 14 70 58 35 86 33 79]
+2023-04-30 11:18:38.456 | INFO     | models.Update:train:50 - Client #45 for epoch #0 of local training
+2023-04-30 11:18:38.814 | INFO     | models.Update:train:50 - Client #45 for epoch #1 of local training
+2023-04-30 11:18:39.158 | INFO     | models.Update:train:50 - Client #45 for epoch #2 of local training
+2023-04-30 11:18:39.498 | INFO     | models.Update:train:50 - Client #45 for epoch #3 of local training
+2023-04-30 11:18:39.839 | INFO     | models.Update:train:50 - Client #45 for epoch #4 of local training
+2023-04-30 11:18:40.186 | INFO     | models.Update:train:50 - Client #19 for epoch #0 of local training
+2023-04-30 11:18:40.529 | INFO     | models.Update:train:50 - Client #19 for epoch #1 of local training
+2023-04-30 11:18:40.873 | INFO     | models.Update:train:50 - Client #19 for epoch #2 of local training
+2023-04-30 11:18:41.213 | INFO     | models.Update:train:50 - Client #19 for epoch #3 of local training
+2023-04-30 11:18:41.553 | INFO     | models.Update:train:50 - Client #19 for epoch #4 of local training
+2023-04-30 11:18:41.899 | INFO     | models.Update:train:50 - Client #72 for epoch #0 of local training
+2023-04-30 11:18:42.246 | INFO     | models.Update:train:50 - Client #72 for epoch #1 of local training
+2023-04-30 11:18:42.590 | INFO     | models.Update:train:50 - Client #72 for epoch #2 of local training
+2023-04-30 11:18:42.933 | INFO     | models.Update:train:50 - Client #72 for epoch #3 of local training
+2023-04-30 11:18:43.279 | INFO     | models.Update:train:50 - Client #72 for epoch #4 of local training
+2023-04-30 11:18:43.626 | INFO     | models.Update:train:50 - Client #14 for epoch #0 of local training
+2023-04-30 11:18:43.970 | INFO     | models.Update:train:50 - Client #14 for epoch #1 of local training
+2023-04-30 11:18:44.316 | INFO     | models.Update:train:50 - Client #14 for epoch #2 of local training
+2023-04-30 11:18:44.661 | INFO     | models.Update:train:50 - Client #14 for epoch #3 of local training
+2023-04-30 11:18:45.014 | INFO     | models.Update:train:50 - Client #14 for epoch #4 of local training
+2023-04-30 11:18:45.358 | INFO     | models.Update:train:50 - Client #70 for epoch #0 of local training
+2023-04-30 11:18:45.704 | INFO     | models.Update:train:50 - Client #70 for epoch #1 of local training
+2023-04-30 11:18:46.048 | INFO     | models.Update:train:50 - Client #70 for epoch #2 of local training
+2023-04-30 11:18:46.390 | INFO     | models.Update:train:50 - Client #70 for epoch #3 of local training
+2023-04-30 11:18:46.736 | INFO     | models.Update:train:50 - Client #70 for epoch #4 of local training
+2023-04-30 11:18:47.229 | INFO     | models.Update:train:50 - Client #58 for epoch #0 of local training
+2023-04-30 11:18:47.574 | INFO     | models.Update:train:50 - Client #58 for epoch #1 of local training
+2023-04-30 11:18:47.926 | INFO     | models.Update:train:50 - Client #58 for epoch #2 of local training
+2023-04-30 11:18:48.283 | INFO     | models.Update:train:50 - Client #58 for epoch #3 of local training
+2023-04-30 11:18:48.676 | INFO     | models.Update:train:50 - Client #58 for epoch #4 of local training
+2023-04-30 11:18:49.124 | INFO     | models.Update:train:50 - Client #35 for epoch #0 of local training
+2023-04-30 11:18:49.596 | INFO     | models.Update:train:50 - Client #35 for epoch #1 of local training
+2023-04-30 11:18:50.091 | INFO     | models.Update:train:50 - Client #35 for epoch #2 of local training
+2023-04-30 11:18:50.586 | INFO     | models.Update:train:50 - Client #35 for epoch #3 of local training
+2023-04-30 11:18:50.940 | INFO     | models.Update:train:50 - Client #35 for epoch #4 of local training
+2023-04-30 11:18:51.381 | INFO     | models.Update:train:50 - Client #86 for epoch #0 of local training
+2023-04-30 11:18:51.762 | INFO     | models.Update:train:50 - Client #86 for epoch #1 of local training
+2023-04-30 11:18:52.111 | INFO     | models.Update:train:50 - Client #86 for epoch #2 of local training
+2023-04-30 11:18:52.458 | INFO     | models.Update:train:50 - Client #86 for epoch #3 of local training
+2023-04-30 11:18:52.804 | INFO     | models.Update:train:50 - Client #86 for epoch #4 of local training
+2023-04-30 11:18:53.152 | INFO     | models.Update:train:50 - Client #33 for epoch #0 of local training
+2023-04-30 11:18:53.499 | INFO     | models.Update:train:50 - Client #33 for epoch #1 of local training
+2023-04-30 11:18:53.893 | INFO     | models.Update:train:50 - Client #33 for epoch #2 of local training
+2023-04-30 11:18:54.297 | INFO     | models.Update:train:50 - Client #33 for epoch #3 of local training
+2023-04-30 11:18:54.776 | INFO     | models.Update:train:50 - Client #33 for epoch #4 of local training
+2023-04-30 11:18:55.635 | INFO     | models.Update:train:50 - Client #79 for epoch #0 of local training
+2023-04-30 11:18:56.058 | INFO     | models.Update:train:50 - Client #79 for epoch #1 of local training
+2023-04-30 11:18:56.531 | INFO     | models.Update:train:50 - Client #79 for epoch #2 of local training
+2023-04-30 11:18:57.016 | INFO     | models.Update:train:50 - Client #79 for epoch #3 of local training
+2023-04-30 11:18:57.493 | INFO     | models.Update:train:50 - Client #79 for epoch #4 of local training
+2023-04-30 11:18:57.904 | INFO     | __main__:<module>:160 - Round   2, Average loss 0.798
+2023-04-30 11:18:57.905 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[32 27 72 57 58 66 68 82 18 73]
+2023-04-30 11:18:57.907 | INFO     | models.Update:train:50 - Client #32 for epoch #0 of local training
+2023-04-30 11:18:58.378 | INFO     | models.Update:train:50 - Client #32 for epoch #1 of local training
+2023-04-30 11:18:58.852 | INFO     | models.Update:train:50 - Client #32 for epoch #2 of local training
+2023-04-30 11:18:59.326 | INFO     | models.Update:train:50 - Client #32 for epoch #3 of local training
+2023-04-30 11:18:59.760 | INFO     | models.Update:train:50 - Client #32 for epoch #4 of local training
+2023-04-30 11:19:00.230 | INFO     | models.Update:train:50 - Client #27 for epoch #0 of local training
+2023-04-30 11:19:00.580 | INFO     | models.Update:train:50 - Client #27 for epoch #1 of local training
+2023-04-30 11:19:00.975 | INFO     | models.Update:train:50 - Client #27 for epoch #2 of local training
+2023-04-30 11:19:01.335 | INFO     | models.Update:train:50 - Client #27 for epoch #3 of local training
+2023-04-30 11:19:01.804 | INFO     | models.Update:train:50 - Client #27 for epoch #4 of local training
+2023-04-30 11:19:02.159 | INFO     | models.Update:train:50 - Client #72 for epoch #0 of local training
+2023-04-30 11:19:02.524 | INFO     | models.Update:train:50 - Client #72 for epoch #1 of local training
+2023-04-30 11:19:02.903 | INFO     | models.Update:train:50 - Client #72 for epoch #2 of local training
+2023-04-30 11:19:03.268 | INFO     | models.Update:train:50 - Client #72 for epoch #3 of local training
+2023-04-30 11:19:03.663 | INFO     | models.Update:train:50 - Client #72 for epoch #4 of local training
+2023-04-30 11:19:04.048 | INFO     | models.Update:train:50 - Client #57 for epoch #0 of local training
+2023-04-30 11:19:04.425 | INFO     | models.Update:train:50 - Client #57 for epoch #1 of local training
+2023-04-30 11:19:04.773 | INFO     | models.Update:train:50 - Client #57 for epoch #2 of local training
+2023-04-30 11:19:05.121 | INFO     | models.Update:train:50 - Client #57 for epoch #3 of local training
+2023-04-30 11:19:05.464 | INFO     | models.Update:train:50 - Client #57 for epoch #4 of local training
+2023-04-30 11:19:05.813 | INFO     | models.Update:train:50 - Client #58 for epoch #0 of local training
+2023-04-30 11:19:06.175 | INFO     | models.Update:train:50 - Client #58 for epoch #1 of local training
+2023-05-01 09:01:25.832 | INFO     | __main__:<module>:91 - Model : CNNMnist(
+  (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
+  (conv2): Conv2d(10, 20, kernel_size=(5, 5), stride=(1, 1))
+  (conv2_drop): Dropout2d(p=0.5, inplace=False)
+  (fc1): Linear(in_features=320, out_features=50, bias=True)
+  (fc2): Linear(in_features=50, out_features=10, bias=True)
+)
+2023-05-01 09:01:25.834 | INFO     | __main__:<module>:114 - The epochs of training is : 200
+2023-05-01 09:01:25.834 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[69  2 22 30 70 60 91 59 37  3]
+2023-05-01 09:01:25.838 | INFO     | models.Update:train:50 - Client #69 for iteration #0 of local training
+2023-05-01 09:01:25.853 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [0/600 (0%)]	Loss: 2.312474
+2023-05-01 09:01:25.928 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [100/600 (17%)]	Loss: 2.367507
+2023-05-01 09:01:25.997 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [200/600 (33%)]	Loss: 2.177402
+2023-05-01 09:01:26.061 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [300/600 (50%)]	Loss: 2.282170
+2023-05-01 09:01:26.126 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [400/600 (67%)]	Loss: 2.069062
+2023-05-01 09:01:26.195 | INFO     | models.Update:train:68 - Client #69 Update local model: 0 [500/600 (83%)]	Loss: 2.203146
+2023-05-01 09:01:26.259 | INFO     | models.Update:train:50 - Client #69 for iteration #1 of local training
+2023-05-01 09:01:26.265 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [0/600 (0%)]	Loss: 2.095074
+2023-05-01 09:01:26.339 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [100/600 (17%)]	Loss: 2.227129
+2023-05-01 09:01:26.412 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [200/600 (33%)]	Loss: 2.052417
+2023-05-01 09:01:26.481 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [300/600 (50%)]	Loss: 2.015230
+2023-05-01 09:01:26.551 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [400/600 (67%)]	Loss: 2.253835
+2023-05-01 09:01:26.621 | INFO     | models.Update:train:68 - Client #69 Update local model: 1 [500/600 (83%)]	Loss: 1.991915
+2023-05-01 09:01:26.682 | INFO     | models.Update:train:50 - Client #69 for iteration #2 of local training
+2023-05-01 09:01:26.689 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [0/600 (0%)]	Loss: 1.739717
+2023-05-01 09:01:26.756 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [100/600 (17%)]	Loss: 1.783710
+2023-05-01 09:01:26.823 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [200/600 (33%)]	Loss: 2.251547
+2023-05-01 09:01:26.890 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [300/600 (50%)]	Loss: 1.574978
+2023-05-01 09:01:26.957 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [400/600 (67%)]	Loss: 1.680103
+2023-05-01 09:01:27.033 | INFO     | models.Update:train:68 - Client #69 Update local model: 2 [500/600 (83%)]	Loss: 1.484498
+2023-05-01 09:01:27.090 | INFO     | models.Update:train:50 - Client #69 for iteration #3 of local training
+2023-05-01 09:01:27.101 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [0/600 (0%)]	Loss: 1.135097
+2023-05-01 09:01:27.177 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [100/600 (17%)]	Loss: 1.356510
+2023-05-01 09:01:27.251 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [200/600 (33%)]	Loss: 1.767380
+2023-05-01 09:01:27.318 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [300/600 (50%)]	Loss: 1.209373
+2023-05-01 09:01:27.388 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [400/600 (67%)]	Loss: 1.527450
+2023-05-01 09:01:27.458 | INFO     | models.Update:train:68 - Client #69 Update local model: 3 [500/600 (83%)]	Loss: 0.463776
+2023-05-01 09:01:27.516 | INFO     | models.Update:train:50 - Client #69 for iteration #4 of local training
+2023-05-01 09:01:27.526 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [0/600 (0%)]	Loss: 1.185575
+2023-05-01 09:01:27.597 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [100/600 (17%)]	Loss: 1.726110
+2023-05-01 09:01:27.666 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [200/600 (33%)]	Loss: 0.550425
+2023-05-01 09:01:27.732 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [300/600 (50%)]	Loss: 0.867369
+2023-05-01 09:01:27.798 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [400/600 (67%)]	Loss: 1.264838
+2023-05-01 09:01:27.866 | INFO     | models.Update:train:68 - Client #69 Update local model: 4 [500/600 (83%)]	Loss: 0.863221
+2023-05-01 09:01:27.928 | INFO     | models.Update:train:50 - Client #2 for iteration #0 of local training
+2023-05-01 09:01:27.935 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [0/600 (0%)]	Loss: 2.335907
+2023-05-01 09:01:28.012 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [100/600 (17%)]	Loss: 2.344474
+2023-05-01 09:01:28.090 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [200/600 (33%)]	Loss: 2.344100
+2023-05-01 09:01:28.157 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [300/600 (50%)]	Loss: 2.223932
+2023-05-01 09:01:28.225 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [400/600 (67%)]	Loss: 2.425145
+2023-05-01 09:01:28.294 | INFO     | models.Update:train:68 - Client #2 Update local model: 0 [500/600 (83%)]	Loss: 2.284116
+2023-05-01 09:01:28.356 | INFO     | models.Update:train:50 - Client #2 for iteration #1 of local training
+2023-05-01 09:01:28.363 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [0/600 (0%)]	Loss: 2.160704
+2023-05-01 09:01:28.431 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [100/600 (17%)]	Loss: 2.267027
+2023-05-01 09:01:28.498 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [200/600 (33%)]	Loss: 2.060539
+2023-05-01 09:01:28.566 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [300/600 (50%)]	Loss: 2.270422
+2023-05-01 09:01:28.633 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [400/600 (67%)]	Loss: 2.203291
+2023-05-01 09:01:28.702 | INFO     | models.Update:train:68 - Client #2 Update local model: 1 [500/600 (83%)]	Loss: 2.101262
+2023-05-01 09:01:28.764 | INFO     | models.Update:train:50 - Client #2 for iteration #2 of local training
+2023-05-01 09:01:28.770 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [0/600 (0%)]	Loss: 1.968900
+2023-05-01 09:01:28.838 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [100/600 (17%)]	Loss: 2.051286
+2023-05-01 09:01:28.906 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [200/600 (33%)]	Loss: 1.787542
+2023-05-01 09:01:28.975 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [300/600 (50%)]	Loss: 2.046190
+2023-05-01 09:01:29.043 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [400/600 (67%)]	Loss: 1.392527
+2023-05-01 09:01:29.112 | INFO     | models.Update:train:68 - Client #2 Update local model: 2 [500/600 (83%)]	Loss: 1.923123
+2023-05-01 09:01:29.175 | INFO     | models.Update:train:50 - Client #2 for iteration #3 of local training
+2023-05-01 09:01:29.182 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [0/600 (0%)]	Loss: 2.016493
+2023-05-01 09:01:29.248 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [100/600 (17%)]	Loss: 1.593264
+2023-05-01 09:01:29.316 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [200/600 (33%)]	Loss: 1.436994
+2023-05-01 09:01:29.383 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [300/600 (50%)]	Loss: 1.284630
+2023-05-01 09:01:29.449 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [400/600 (67%)]	Loss: 1.531421
+2023-05-01 09:01:29.518 | INFO     | models.Update:train:68 - Client #2 Update local model: 3 [500/600 (83%)]	Loss: 1.442661
+2023-05-01 09:01:29.579 | INFO     | models.Update:train:50 - Client #2 for iteration #4 of local training
+2023-05-01 09:01:29.586 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [0/600 (0%)]	Loss: 1.144307
+2023-05-01 09:01:29.655 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [100/600 (17%)]	Loss: 1.444484
+2023-05-01 09:01:29.730 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [200/600 (33%)]	Loss: 1.329305
+2023-05-01 09:01:29.798 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [300/600 (50%)]	Loss: 1.486349
+2023-05-01 09:01:29.866 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [400/600 (67%)]	Loss: 1.473539
+2023-05-01 09:01:29.933 | INFO     | models.Update:train:68 - Client #2 Update local model: 4 [500/600 (83%)]	Loss: 0.828262
+2023-05-01 09:01:30.000 | INFO     | models.Update:train:50 - Client #22 for iteration #0 of local training
+2023-05-01 09:01:30.008 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [0/600 (0%)]	Loss: 2.357433
+2023-05-01 09:01:30.084 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [100/600 (17%)]	Loss: 2.313274
+2023-05-01 09:01:30.159 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [200/600 (33%)]	Loss: 2.287960
+2023-05-01 09:01:30.233 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [300/600 (50%)]	Loss: 2.397542
+2023-05-01 09:01:30.309 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [400/600 (67%)]	Loss: 2.236557
+2023-05-01 09:01:30.387 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [500/600 (83%)]	Loss: 2.336398
+2023-05-01 09:01:30.459 | INFO     | models.Update:train:50 - Client #22 for iteration #1 of local training
+2023-05-01 09:01:30.466 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [0/600 (0%)]	Loss: 2.087092
+2023-05-01 09:01:30.544 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [100/600 (17%)]	Loss: 2.269810
+2023-05-01 09:01:30.614 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [200/600 (33%)]	Loss: 2.189954
+2023-05-01 09:01:30.681 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [300/600 (50%)]	Loss: 2.010309
+2023-05-01 09:01:30.750 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [400/600 (67%)]	Loss: 2.148492
+2023-05-01 09:01:30.818 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [500/600 (83%)]	Loss: 2.131721
+2023-05-01 09:01:30.884 | INFO     | models.Update:train:50 - Client #22 for iteration #2 of local training
+2023-05-01 09:01:30.890 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [0/600 (0%)]	Loss: 1.851920
+2023-05-01 09:01:30.970 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [100/600 (17%)]	Loss: 1.858548
+2023-05-01 09:01:31.037 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [200/600 (33%)]	Loss: 2.031778
+2023-05-01 09:01:31.104 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [300/600 (50%)]	Loss: 1.369534
+2023-05-01 09:01:31.172 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [400/600 (67%)]	Loss: 1.193619
+2023-05-01 09:01:31.240 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [500/600 (83%)]	Loss: 1.472507
+2023-05-01 09:01:31.302 | INFO     | models.Update:train:50 - Client #22 for iteration #3 of local training
+2023-05-01 09:01:31.308 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [0/600 (0%)]	Loss: 0.871307
+2023-05-01 09:01:31.378 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [100/600 (17%)]	Loss: 0.821138
+2023-05-01 09:01:31.444 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [200/600 (33%)]	Loss: 0.944164
+2023-05-01 09:01:31.512 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [300/600 (50%)]	Loss: 1.060085
+2023-05-01 09:01:31.580 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [400/600 (67%)]	Loss: 1.369430
+2023-05-01 09:01:31.649 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [500/600 (83%)]	Loss: 0.931278
+2023-05-01 09:01:31.712 | INFO     | models.Update:train:50 - Client #22 for iteration #4 of local training
+2023-05-01 09:01:31.718 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [0/600 (0%)]	Loss: 0.986948
+2023-05-01 09:01:31.797 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [100/600 (17%)]	Loss: 0.823539
+2023-05-01 09:01:31.864 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [200/600 (33%)]	Loss: 0.627694
+2023-05-01 09:01:31.931 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [300/600 (50%)]	Loss: 0.702900
+2023-05-01 09:01:31.998 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [400/600 (67%)]	Loss: 1.368932
+2023-05-01 09:01:32.065 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [500/600 (83%)]	Loss: 1.266972
+2023-05-01 09:01:32.128 | INFO     | models.Update:train:50 - Client #30 for iteration #0 of local training
+2023-05-01 09:01:32.134 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [0/600 (0%)]	Loss: 2.333349
+2023-05-01 09:01:32.202 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [100/600 (17%)]	Loss: 2.364668
+2023-05-01 09:01:32.269 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [200/600 (33%)]	Loss: 2.262331
+2023-05-01 09:01:32.337 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [300/600 (50%)]	Loss: 2.271830
+2023-05-01 09:01:32.405 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [400/600 (67%)]	Loss: 2.264304
+2023-05-01 09:01:32.473 | INFO     | models.Update:train:68 - Client #30 Update local model: 0 [500/600 (83%)]	Loss: 2.356321
+2023-05-01 09:01:32.535 | INFO     | models.Update:train:50 - Client #30 for iteration #1 of local training
+2023-05-01 09:01:32.541 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [0/600 (0%)]	Loss: 2.258808
+2023-05-01 09:01:32.608 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [100/600 (17%)]	Loss: 2.276241
+2023-05-01 09:01:32.675 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [200/600 (33%)]	Loss: 2.235428
+2023-05-01 09:01:32.743 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [300/600 (50%)]	Loss: 2.032539
+2023-05-01 09:01:32.811 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [400/600 (67%)]	Loss: 2.002763
+2023-05-01 09:01:32.882 | INFO     | models.Update:train:68 - Client #30 Update local model: 1 [500/600 (83%)]	Loss: 1.863081
+2023-05-01 09:01:32.944 | INFO     | models.Update:train:50 - Client #30 for iteration #2 of local training
+2023-05-01 09:01:32.951 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [0/600 (0%)]	Loss: 2.024371
+2023-05-01 09:01:33.029 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [100/600 (17%)]	Loss: 2.100063
+2023-05-01 09:01:33.094 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [200/600 (33%)]	Loss: 1.687881
+2023-05-01 09:01:33.163 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [300/600 (50%)]	Loss: 2.053809
+2023-05-01 09:01:33.229 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [400/600 (67%)]	Loss: 1.993603
+2023-05-01 09:01:33.296 | INFO     | models.Update:train:68 - Client #30 Update local model: 2 [500/600 (83%)]	Loss: 1.877146
+2023-05-01 09:01:33.361 | INFO     | models.Update:train:50 - Client #30 for iteration #3 of local training
+2023-05-01 09:01:33.367 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [0/600 (0%)]	Loss: 2.481179
+2023-05-01 09:01:33.437 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [100/600 (17%)]	Loss: 1.493411
+2023-05-01 09:01:33.504 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [200/600 (33%)]	Loss: 1.646515
+2023-05-01 09:01:33.572 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [300/600 (50%)]	Loss: 1.431051
+2023-05-01 09:01:33.642 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [400/600 (67%)]	Loss: 1.382643
+2023-05-01 09:01:33.709 | INFO     | models.Update:train:68 - Client #30 Update local model: 3 [500/600 (83%)]	Loss: 0.893474
+2023-05-01 09:01:33.773 | INFO     | models.Update:train:50 - Client #30 for iteration #4 of local training
+2023-05-01 09:01:33.779 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [0/600 (0%)]	Loss: 1.442887
+2023-05-01 09:01:33.847 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [100/600 (17%)]	Loss: 1.435871
+2023-05-01 09:01:33.918 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [200/600 (33%)]	Loss: 1.374556
+2023-05-01 09:01:33.986 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [300/600 (50%)]	Loss: 1.139783
+2023-05-01 09:01:34.056 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [400/600 (67%)]	Loss: 1.012717
+2023-05-01 09:01:34.124 | INFO     | models.Update:train:68 - Client #30 Update local model: 4 [500/600 (83%)]	Loss: 0.911270
+2023-05-01 09:01:34.187 | INFO     | models.Update:train:50 - Client #70 for iteration #0 of local training
+2023-05-01 09:01:34.193 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [0/600 (0%)]	Loss: 2.333813
+2023-05-01 09:01:34.261 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [100/600 (17%)]	Loss: 2.357823
+2023-05-01 09:01:34.329 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [200/600 (33%)]	Loss: 2.340445
+2023-05-01 09:01:34.398 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [300/600 (50%)]	Loss: 2.264906
+2023-05-01 09:01:34.465 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [400/600 (67%)]	Loss: 2.244749
+2023-05-01 09:01:34.533 | INFO     | models.Update:train:68 - Client #70 Update local model: 0 [500/600 (83%)]	Loss: 2.268700
+2023-05-01 09:01:34.594 | INFO     | models.Update:train:50 - Client #70 for iteration #1 of local training
+2023-05-01 09:01:34.601 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [0/600 (0%)]	Loss: 2.169210
+2023-05-01 09:01:34.684 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [100/600 (17%)]	Loss: 2.133876
+2023-05-01 09:01:34.754 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [200/600 (33%)]	Loss: 2.169589
+2023-05-01 09:01:34.823 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [300/600 (50%)]	Loss: 2.025147
+2023-05-01 09:01:34.892 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [400/600 (67%)]	Loss: 2.306832
+2023-05-01 09:01:34.957 | INFO     | models.Update:train:68 - Client #70 Update local model: 1 [500/600 (83%)]	Loss: 2.143398
+2023-05-01 09:01:35.021 | INFO     | models.Update:train:50 - Client #70 for iteration #2 of local training
+2023-05-01 09:01:35.028 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [0/600 (0%)]	Loss: 1.844251
+2023-05-01 09:01:35.096 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [100/600 (17%)]	Loss: 1.550427
+2023-05-01 09:01:35.164 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [200/600 (33%)]	Loss: 2.187549
+2023-05-01 09:01:35.232 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [300/600 (50%)]	Loss: 1.626568
+2023-05-01 09:01:35.309 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [400/600 (67%)]	Loss: 1.641380
+2023-05-01 09:01:35.385 | INFO     | models.Update:train:68 - Client #70 Update local model: 2 [500/600 (83%)]	Loss: 1.231200
+2023-05-01 09:01:35.451 | INFO     | models.Update:train:50 - Client #70 for iteration #3 of local training
+2023-05-01 09:01:35.458 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [0/600 (0%)]	Loss: 1.447275
+2023-05-01 09:01:35.531 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [100/600 (17%)]	Loss: 1.609387
+2023-05-01 09:01:35.604 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [200/600 (33%)]	Loss: 1.268236
+2023-05-01 09:01:35.678 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [300/600 (50%)]	Loss: 2.064142
+2023-05-01 09:01:35.750 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [400/600 (67%)]	Loss: 1.513897
+2023-05-01 09:01:35.821 | INFO     | models.Update:train:68 - Client #70 Update local model: 3 [500/600 (83%)]	Loss: 1.380427
+2023-05-01 09:01:35.887 | INFO     | models.Update:train:50 - Client #70 for iteration #4 of local training
+2023-05-01 09:01:35.895 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [0/600 (0%)]	Loss: 1.178860
+2023-05-01 09:01:35.967 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [100/600 (17%)]	Loss: 0.986054
+2023-05-01 09:01:36.041 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [200/600 (33%)]	Loss: 1.469693
+2023-05-01 09:01:36.113 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [300/600 (50%)]	Loss: 0.508593
+2023-05-01 09:01:36.186 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [400/600 (67%)]	Loss: 1.711925
+2023-05-01 09:01:36.257 | INFO     | models.Update:train:68 - Client #70 Update local model: 4 [500/600 (83%)]	Loss: 0.997556
+2023-05-01 09:01:36.325 | INFO     | models.Update:train:50 - Client #60 for iteration #0 of local training
+2023-05-01 09:01:36.332 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [0/600 (0%)]	Loss: 2.279054
+2023-05-01 09:01:36.405 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [100/600 (17%)]	Loss: 2.375239
+2023-05-01 09:01:36.479 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [200/600 (33%)]	Loss: 2.280143
+2023-05-01 09:01:36.552 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [300/600 (50%)]	Loss: 2.360626
+2023-05-01 09:01:36.624 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [400/600 (67%)]	Loss: 2.398600
+2023-05-01 09:01:36.696 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [500/600 (83%)]	Loss: 2.210347
+2023-05-01 09:01:36.763 | INFO     | models.Update:train:50 - Client #60 for iteration #1 of local training
+2023-05-01 09:01:36.770 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [0/600 (0%)]	Loss: 2.242469
+2023-05-01 09:01:36.842 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [100/600 (17%)]	Loss: 2.085838
+2023-05-01 09:01:36.916 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [200/600 (33%)]	Loss: 1.861995
+2023-05-01 09:01:36.988 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [300/600 (50%)]	Loss: 2.005866
+2023-05-01 09:01:37.063 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [400/600 (67%)]	Loss: 1.813053
+2023-05-01 09:01:37.135 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [500/600 (83%)]	Loss: 1.829259
+2023-05-01 09:01:37.202 | INFO     | models.Update:train:50 - Client #60 for iteration #2 of local training
+2023-05-01 09:01:37.209 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [0/600 (0%)]	Loss: 1.881710
+2023-05-01 09:01:37.288 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [100/600 (17%)]	Loss: 1.919739
+2023-05-01 09:01:37.357 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [200/600 (33%)]	Loss: 1.564931
+2023-05-01 09:01:37.425 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [300/600 (50%)]	Loss: 2.027317
+2023-05-01 09:01:37.493 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [400/600 (67%)]	Loss: 1.335010
+2023-05-01 09:01:37.562 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [500/600 (83%)]	Loss: 1.478729
+2023-05-01 09:01:37.623 | INFO     | models.Update:train:50 - Client #60 for iteration #3 of local training
+2023-05-01 09:01:37.631 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [0/600 (0%)]	Loss: 1.206144
+2023-05-01 09:01:37.711 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [100/600 (17%)]	Loss: 1.319093
+2023-05-01 09:01:37.784 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [200/600 (33%)]	Loss: 1.422292
+2023-05-01 09:01:37.858 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [300/600 (50%)]	Loss: 1.079308
+2023-05-01 09:01:37.928 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [400/600 (67%)]	Loss: 1.518138
+2023-05-01 09:01:38.001 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [500/600 (83%)]	Loss: 1.345451
+2023-05-01 09:01:38.067 | INFO     | models.Update:train:50 - Client #60 for iteration #4 of local training
+2023-05-01 09:01:38.075 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [0/600 (0%)]	Loss: 1.306246
+2023-05-01 09:01:38.154 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [100/600 (17%)]	Loss: 1.116379
+2023-05-01 09:01:38.222 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [200/600 (33%)]	Loss: 1.608473
+2023-05-01 09:01:38.290 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [300/600 (50%)]	Loss: 0.951864
+2023-05-01 09:01:38.358 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [400/600 (67%)]	Loss: 0.984859
+2023-05-01 09:01:38.427 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [500/600 (83%)]	Loss: 0.487041
+2023-05-01 09:01:38.490 | INFO     | models.Update:train:50 - Client #91 for iteration #0 of local training
+2023-05-01 09:01:38.496 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [0/600 (0%)]	Loss: 2.353388
+2023-05-01 09:01:38.564 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [100/600 (17%)]	Loss: 2.307309
+2023-05-01 09:01:38.632 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [200/600 (33%)]	Loss: 2.345744
+2023-05-01 09:01:38.701 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [300/600 (50%)]	Loss: 2.260779
+2023-05-01 09:01:38.770 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [400/600 (67%)]	Loss: 2.275241
+2023-05-01 09:01:38.838 | INFO     | models.Update:train:68 - Client #91 Update local model: 0 [500/600 (83%)]	Loss: 2.232799
+2023-05-01 09:01:38.901 | INFO     | models.Update:train:50 - Client #91 for iteration #1 of local training
+2023-05-01 09:01:38.906 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [0/600 (0%)]	Loss: 2.152746
+2023-05-01 09:01:38.976 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [100/600 (17%)]	Loss: 2.298469
+2023-05-01 09:01:39.042 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [200/600 (33%)]	Loss: 2.229668
+2023-05-01 09:01:39.111 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [300/600 (50%)]	Loss: 2.253092
+2023-05-01 09:01:39.180 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [400/600 (67%)]	Loss: 2.172874
+2023-05-01 09:01:39.248 | INFO     | models.Update:train:68 - Client #91 Update local model: 1 [500/600 (83%)]	Loss: 2.036319
+2023-05-01 09:01:39.311 | INFO     | models.Update:train:50 - Client #91 for iteration #2 of local training
+2023-05-01 09:01:39.318 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [0/600 (0%)]	Loss: 2.147386
+2023-05-01 09:01:39.401 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [100/600 (17%)]	Loss: 2.219347
+2023-05-01 09:01:39.469 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [200/600 (33%)]	Loss: 1.931393
+2023-05-01 09:01:39.535 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [300/600 (50%)]	Loss: 1.953243
+2023-05-01 09:01:39.603 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [400/600 (67%)]	Loss: 1.734063
+2023-05-01 09:01:39.673 | INFO     | models.Update:train:68 - Client #91 Update local model: 2 [500/600 (83%)]	Loss: 2.239110
+2023-05-01 09:01:39.736 | INFO     | models.Update:train:50 - Client #91 for iteration #3 of local training
+2023-05-01 09:01:39.742 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [0/600 (0%)]	Loss: 1.223084
+2023-05-01 09:01:39.810 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [100/600 (17%)]	Loss: 0.733546
+2023-05-01 09:01:39.879 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [200/600 (33%)]	Loss: 1.252024
+2023-05-01 09:01:39.949 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [300/600 (50%)]	Loss: 0.941418
+2023-05-01 09:01:40.019 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [400/600 (67%)]	Loss: 1.192651
+2023-05-01 09:01:40.087 | INFO     | models.Update:train:68 - Client #91 Update local model: 3 [500/600 (83%)]	Loss: 0.823475
+2023-05-01 09:01:40.151 | INFO     | models.Update:train:50 - Client #91 for iteration #4 of local training
+2023-05-01 09:01:40.156 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [0/600 (0%)]	Loss: 1.113881
+2023-05-01 09:01:40.224 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [100/600 (17%)]	Loss: 1.156417
+2023-05-01 09:01:40.294 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [200/600 (33%)]	Loss: 0.523526
+2023-05-01 09:01:40.364 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [300/600 (50%)]	Loss: 0.710989
+2023-05-01 09:01:40.433 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [400/600 (67%)]	Loss: 0.267853
+2023-05-01 09:01:40.502 | INFO     | models.Update:train:68 - Client #91 Update local model: 4 [500/600 (83%)]	Loss: 0.348966
+2023-05-01 09:01:40.565 | INFO     | models.Update:train:50 - Client #59 for iteration #0 of local training
+2023-05-01 09:01:40.571 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [0/600 (0%)]	Loss: 2.352301
+2023-05-01 09:01:40.650 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [100/600 (17%)]	Loss: 2.375400
+2023-05-01 09:01:40.717 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [200/600 (33%)]	Loss: 2.224481
+2023-05-01 09:01:40.786 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [300/600 (50%)]	Loss: 2.304027
+2023-05-01 09:01:40.855 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [400/600 (67%)]	Loss: 2.334129
+2023-05-01 09:01:40.925 | INFO     | models.Update:train:68 - Client #59 Update local model: 0 [500/600 (83%)]	Loss: 2.155220
+2023-05-01 09:01:40.988 | INFO     | models.Update:train:50 - Client #59 for iteration #1 of local training
+2023-05-01 09:01:40.994 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [0/600 (0%)]	Loss: 2.278379
+2023-05-01 09:01:41.061 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [100/600 (17%)]	Loss: 2.270343
+2023-05-01 09:01:41.129 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [200/600 (33%)]	Loss: 2.085373
+2023-05-01 09:01:41.198 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [300/600 (50%)]	Loss: 1.987615
+2023-05-01 09:01:41.267 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [400/600 (67%)]	Loss: 2.169246
+2023-05-01 09:01:41.336 | INFO     | models.Update:train:68 - Client #59 Update local model: 1 [500/600 (83%)]	Loss: 2.159689
+2023-05-01 09:01:41.399 | INFO     | models.Update:train:50 - Client #59 for iteration #2 of local training
+2023-05-01 09:01:41.405 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [0/600 (0%)]	Loss: 1.765593
+2023-05-01 09:01:41.473 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [100/600 (17%)]	Loss: 1.947776
+2023-05-01 09:01:41.545 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [200/600 (33%)]	Loss: 2.056249
+2023-05-01 09:01:41.614 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [300/600 (50%)]	Loss: 1.762678
+2023-05-01 09:01:41.684 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [400/600 (67%)]	Loss: 1.594161
+2023-05-01 09:01:41.757 | INFO     | models.Update:train:68 - Client #59 Update local model: 2 [500/600 (83%)]	Loss: 1.839205
+2023-05-01 09:01:41.829 | INFO     | models.Update:train:50 - Client #59 for iteration #3 of local training
+2023-05-01 09:01:41.836 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [0/600 (0%)]	Loss: 1.516712
+2023-05-01 09:01:41.920 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [100/600 (17%)]	Loss: 1.556916
+2023-05-01 09:01:41.994 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [200/600 (33%)]	Loss: 1.234921
+2023-05-01 09:01:42.069 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [300/600 (50%)]	Loss: 1.052146
+2023-05-01 09:01:42.145 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [400/600 (67%)]	Loss: 1.823077
+2023-05-01 09:01:42.227 | INFO     | models.Update:train:68 - Client #59 Update local model: 3 [500/600 (83%)]	Loss: 1.690469
+2023-05-01 09:01:42.298 | INFO     | models.Update:train:50 - Client #59 for iteration #4 of local training
+2023-05-01 09:01:42.306 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [0/600 (0%)]	Loss: 0.936161
+2023-05-01 09:01:42.383 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [100/600 (17%)]	Loss: 1.536832
+2023-05-01 09:01:42.450 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [200/600 (33%)]	Loss: 0.816708
+2023-05-01 09:01:42.518 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [300/600 (50%)]	Loss: 0.623535
+2023-05-01 09:01:42.588 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [400/600 (67%)]	Loss: 1.000481
+2023-05-01 09:01:42.656 | INFO     | models.Update:train:68 - Client #59 Update local model: 4 [500/600 (83%)]	Loss: 1.263300
+2023-05-01 09:01:42.723 | INFO     | models.Update:train:50 - Client #37 for iteration #0 of local training
+2023-05-01 09:01:42.729 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [0/600 (0%)]	Loss: 2.397703
+2023-05-01 09:01:42.808 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [100/600 (17%)]	Loss: 2.339281
+2023-05-01 09:01:42.882 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [200/600 (33%)]	Loss: 2.326217
+2023-05-01 09:01:42.958 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [300/600 (50%)]	Loss: 2.313475
+2023-05-01 09:01:43.033 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [400/600 (67%)]	Loss: 2.324479
+2023-05-01 09:01:43.103 | INFO     | models.Update:train:68 - Client #37 Update local model: 0 [500/600 (83%)]	Loss: 2.216982
+2023-05-01 09:01:43.165 | INFO     | models.Update:train:50 - Client #37 for iteration #1 of local training
+2023-05-01 09:01:43.172 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [0/600 (0%)]	Loss: 2.193070
+2023-05-01 09:01:43.240 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [100/600 (17%)]	Loss: 2.294014
+2023-05-01 09:01:43.314 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [200/600 (33%)]	Loss: 2.202357
+2023-05-01 09:01:43.382 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [300/600 (50%)]	Loss: 2.228908
+2023-05-01 09:01:43.450 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [400/600 (67%)]	Loss: 2.121118
+2023-05-01 09:01:43.518 | INFO     | models.Update:train:68 - Client #37 Update local model: 1 [500/600 (83%)]	Loss: 2.381155
+2023-05-01 09:01:43.578 | INFO     | models.Update:train:50 - Client #37 for iteration #2 of local training
+2023-05-01 09:01:43.585 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [0/600 (0%)]	Loss: 1.727268
+2023-05-01 09:01:43.652 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [100/600 (17%)]	Loss: 1.985822
+2023-05-01 09:01:43.720 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [200/600 (33%)]	Loss: 1.908190
+2023-05-01 09:01:43.789 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [300/600 (50%)]	Loss: 1.907599
+2023-05-01 09:01:43.857 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [400/600 (67%)]	Loss: 1.982801
+2023-05-01 09:01:43.926 | INFO     | models.Update:train:68 - Client #37 Update local model: 2 [500/600 (83%)]	Loss: 1.474203
+2023-05-01 09:01:43.989 | INFO     | models.Update:train:50 - Client #37 for iteration #3 of local training
+2023-05-01 09:01:43.996 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [0/600 (0%)]	Loss: 1.541052
+2023-05-01 09:01:44.075 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [100/600 (17%)]	Loss: 1.673208
+2023-05-01 09:01:44.143 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [200/600 (33%)]	Loss: 1.291901
+2023-05-01 09:01:44.214 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [300/600 (50%)]	Loss: 1.792480
+2023-05-01 09:01:44.283 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [400/600 (67%)]	Loss: 1.063916
+2023-05-01 09:01:44.352 | INFO     | models.Update:train:68 - Client #37 Update local model: 3 [500/600 (83%)]	Loss: 0.763657
+2023-05-01 09:01:44.414 | INFO     | models.Update:train:50 - Client #37 for iteration #4 of local training
+2023-05-01 09:01:44.421 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [0/600 (0%)]	Loss: 1.758265
+2023-05-01 09:01:44.505 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [100/600 (17%)]	Loss: 1.086405
+2023-05-01 09:01:44.575 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [200/600 (33%)]	Loss: 1.629603
+2023-05-01 09:01:44.643 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [300/600 (50%)]	Loss: 1.254218
+2023-05-01 09:01:44.711 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [400/600 (67%)]	Loss: 0.991373
+2023-05-01 09:01:44.779 | INFO     | models.Update:train:68 - Client #37 Update local model: 4 [500/600 (83%)]	Loss: 0.823685
+2023-05-01 09:01:44.841 | INFO     | models.Update:train:50 - Client #3 for iteration #0 of local training
+2023-05-01 09:01:44.848 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [0/600 (0%)]	Loss: 2.307732
+2023-05-01 09:01:44.919 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [100/600 (17%)]	Loss: 2.368713
+2023-05-01 09:01:44.987 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [200/600 (33%)]	Loss: 2.235498
+2023-05-01 09:01:45.055 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [300/600 (50%)]	Loss: 2.204142
+2023-05-01 09:01:45.125 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [400/600 (67%)]	Loss: 2.333146
+2023-05-01 09:01:45.195 | INFO     | models.Update:train:68 - Client #3 Update local model: 0 [500/600 (83%)]	Loss: 2.353554
+2023-05-01 09:01:45.260 | INFO     | models.Update:train:50 - Client #3 for iteration #1 of local training
+2023-05-01 09:01:45.266 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [0/600 (0%)]	Loss: 2.244066
+2023-05-01 09:01:45.332 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [100/600 (17%)]	Loss: 2.257390
+2023-05-01 09:01:45.402 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [200/600 (33%)]	Loss: 2.188180
+2023-05-01 09:01:45.471 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [300/600 (50%)]	Loss: 2.219646
+2023-05-01 09:01:45.540 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [400/600 (67%)]	Loss: 2.068477
+2023-05-01 09:01:45.608 | INFO     | models.Update:train:68 - Client #3 Update local model: 1 [500/600 (83%)]	Loss: 2.176588
+2023-05-01 09:01:45.673 | INFO     | models.Update:train:50 - Client #3 for iteration #2 of local training
+2023-05-01 09:01:45.680 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [0/600 (0%)]	Loss: 1.938080
+2023-05-01 09:01:45.747 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [100/600 (17%)]	Loss: 1.504290
+2023-05-01 09:01:45.816 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [200/600 (33%)]	Loss: 2.031188
+2023-05-01 09:01:45.884 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [300/600 (50%)]	Loss: 1.650256
+2023-05-01 09:01:45.954 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [400/600 (67%)]	Loss: 1.554086
+2023-05-01 09:01:46.021 | INFO     | models.Update:train:68 - Client #3 Update local model: 2 [500/600 (83%)]	Loss: 1.593393
+2023-05-01 09:01:46.086 | INFO     | models.Update:train:50 - Client #3 for iteration #3 of local training
+2023-05-01 09:01:46.092 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [0/600 (0%)]	Loss: 1.600257
+2023-05-01 09:01:46.160 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [100/600 (17%)]	Loss: 1.865220
+2023-05-01 09:01:46.228 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [200/600 (33%)]	Loss: 1.262848
+2023-05-01 09:01:46.297 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [300/600 (50%)]	Loss: 1.637096
+2023-05-01 09:01:46.366 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [400/600 (67%)]	Loss: 1.717819
+2023-05-01 09:01:46.435 | INFO     | models.Update:train:68 - Client #3 Update local model: 3 [500/600 (83%)]	Loss: 1.585913
+2023-05-01 09:01:46.499 | INFO     | models.Update:train:50 - Client #3 for iteration #4 of local training
+2023-05-01 09:01:46.505 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [0/600 (0%)]	Loss: 0.790350
+2023-05-01 09:01:46.574 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [100/600 (17%)]	Loss: 1.347143
+2023-05-01 09:01:46.645 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [200/600 (33%)]	Loss: 1.298764
+2023-05-01 09:01:46.717 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [300/600 (50%)]	Loss: 1.112150
+2023-05-01 09:01:46.793 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [400/600 (67%)]	Loss: 0.476285
+2023-05-01 09:01:46.861 | INFO     | models.Update:train:68 - Client #3 Update local model: 4 [500/600 (83%)]	Loss: 1.102715
+2023-05-01 09:01:46.926 | INFO     | __main__:<module>:160 - Round   1, Average loss 1.701
+2023-05-01 09:01:46.927 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[ 9 57 80 14 16 28 86 91 19 96]
+2023-05-01 09:01:46.928 | INFO     | models.Update:train:50 - Client #9 for iteration #0 of local training
+2023-05-01 09:01:46.934 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [0/600 (0%)]	Loss: 1.222813
+2023-05-01 09:01:47.002 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [100/600 (17%)]	Loss: 1.051154
+2023-05-01 09:01:47.069 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [200/600 (33%)]	Loss: 0.518017
+2023-05-01 09:01:47.137 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [300/600 (50%)]	Loss: 1.038544
+2023-05-01 09:01:47.204 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [400/600 (67%)]	Loss: 1.000316
+2023-05-01 09:01:47.272 | INFO     | models.Update:train:68 - Client #9 Update local model: 0 [500/600 (83%)]	Loss: 0.979317
+2023-05-01 09:01:47.334 | INFO     | models.Update:train:50 - Client #9 for iteration #1 of local training
+2023-05-01 09:01:47.341 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [0/600 (0%)]	Loss: 1.596723
+2023-05-01 09:01:47.410 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [100/600 (17%)]	Loss: 1.088529
+2023-05-01 09:01:47.478 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [200/600 (33%)]	Loss: 0.644162
+2023-05-01 09:01:47.547 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [300/600 (50%)]	Loss: 0.866036
+2023-05-01 09:01:47.616 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [400/600 (67%)]	Loss: 0.791172
+2023-05-01 09:01:47.684 | INFO     | models.Update:train:68 - Client #9 Update local model: 1 [500/600 (83%)]	Loss: 1.042871
+2023-05-01 09:01:47.749 | INFO     | models.Update:train:50 - Client #9 for iteration #2 of local training
+2023-05-01 09:01:47.756 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [0/600 (0%)]	Loss: 0.829104
+2023-05-01 09:01:47.835 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [100/600 (17%)]	Loss: 0.667470
+2023-05-01 09:01:47.904 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [200/600 (33%)]	Loss: 0.758723
+2023-05-01 09:01:47.972 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [300/600 (50%)]	Loss: 0.640758
+2023-05-01 09:01:48.041 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [400/600 (67%)]	Loss: 1.056703
+2023-05-01 09:01:48.111 | INFO     | models.Update:train:68 - Client #9 Update local model: 2 [500/600 (83%)]	Loss: 0.666046
+2023-05-01 09:01:48.173 | INFO     | models.Update:train:50 - Client #9 for iteration #3 of local training
+2023-05-01 09:01:48.180 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [0/600 (0%)]	Loss: 0.170299
+2023-05-01 09:01:48.247 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [100/600 (17%)]	Loss: 0.807291
+2023-05-01 09:01:48.315 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [200/600 (33%)]	Loss: 0.690258
+2023-05-01 09:01:48.386 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [300/600 (50%)]	Loss: 0.791012
+2023-05-01 09:01:48.456 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [400/600 (67%)]	Loss: 0.398385
+2023-05-01 09:01:48.524 | INFO     | models.Update:train:68 - Client #9 Update local model: 3 [500/600 (83%)]	Loss: 0.831291
+2023-05-01 09:01:48.588 | INFO     | models.Update:train:50 - Client #9 for iteration #4 of local training
+2023-05-01 09:01:48.594 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [0/600 (0%)]	Loss: 1.098797
+2023-05-01 09:01:48.663 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [100/600 (17%)]	Loss: 0.427522
+2023-05-01 09:01:48.731 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [200/600 (33%)]	Loss: 0.525556
+2023-05-01 09:01:48.799 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [300/600 (50%)]	Loss: 0.712451
+2023-05-01 09:01:48.867 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [400/600 (67%)]	Loss: 1.018743
+2023-05-01 09:01:48.937 | INFO     | models.Update:train:68 - Client #9 Update local model: 4 [500/600 (83%)]	Loss: 0.960985
+2023-05-01 09:01:49.005 | INFO     | models.Update:train:50 - Client #57 for iteration #0 of local training
+2023-05-01 09:01:49.011 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [0/600 (0%)]	Loss: 0.937211
+2023-05-01 09:01:49.079 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [100/600 (17%)]	Loss: 1.492390
+2023-05-01 09:01:49.146 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [200/600 (33%)]	Loss: 0.910732
+2023-05-01 09:01:49.214 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [300/600 (50%)]	Loss: 0.954775
+2023-05-01 09:01:49.283 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [400/600 (67%)]	Loss: 0.910456
+2023-05-01 09:01:49.354 | INFO     | models.Update:train:68 - Client #57 Update local model: 0 [500/600 (83%)]	Loss: 1.192730
+2023-05-01 09:01:49.423 | INFO     | models.Update:train:50 - Client #57 for iteration #1 of local training
+2023-05-01 09:01:49.429 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [0/600 (0%)]	Loss: 0.506273
+2023-05-01 09:01:49.509 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [100/600 (17%)]	Loss: 0.844575
+2023-05-01 09:01:49.579 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [200/600 (33%)]	Loss: 1.113977
+2023-05-01 09:01:49.648 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [300/600 (50%)]	Loss: 0.564252
+2023-05-01 09:01:49.717 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [400/600 (67%)]	Loss: 2.033120
+2023-05-01 09:01:49.788 | INFO     | models.Update:train:68 - Client #57 Update local model: 1 [500/600 (83%)]	Loss: 0.879599
+2023-05-01 09:01:49.850 | INFO     | models.Update:train:50 - Client #57 for iteration #2 of local training
+2023-05-01 09:01:49.857 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [0/600 (0%)]	Loss: 1.204578
+2023-05-01 09:01:49.925 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [100/600 (17%)]	Loss: 0.834603
+2023-05-01 09:01:49.995 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [200/600 (33%)]	Loss: 0.471734
+2023-05-01 09:01:50.066 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [300/600 (50%)]	Loss: 0.604500
+2023-05-01 09:01:50.134 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [400/600 (67%)]	Loss: 0.607316
+2023-05-01 09:01:50.203 | INFO     | models.Update:train:68 - Client #57 Update local model: 2 [500/600 (83%)]	Loss: 1.155120
+2023-05-01 09:01:50.266 | INFO     | models.Update:train:50 - Client #57 for iteration #3 of local training
+2023-05-01 09:01:50.272 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [0/600 (0%)]	Loss: 0.477735
+2023-05-01 09:01:50.340 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [100/600 (17%)]	Loss: 1.083563
+2023-05-01 09:01:50.409 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [200/600 (33%)]	Loss: 0.475948
+2023-05-01 09:01:50.477 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [300/600 (50%)]	Loss: 0.380196
+2023-05-01 09:01:50.546 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [400/600 (67%)]	Loss: 0.739061
+2023-05-01 09:01:50.615 | INFO     | models.Update:train:68 - Client #57 Update local model: 3 [500/600 (83%)]	Loss: 0.943046
+2023-05-01 09:01:50.680 | INFO     | models.Update:train:50 - Client #57 for iteration #4 of local training
+2023-05-01 09:01:50.686 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [0/600 (0%)]	Loss: 0.547024
+2023-05-01 09:01:50.755 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [100/600 (17%)]	Loss: 0.481867
+2023-05-01 09:01:50.822 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [200/600 (33%)]	Loss: 0.753976
+2023-05-01 09:01:50.892 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [300/600 (50%)]	Loss: 0.677583
+2023-05-01 09:01:50.961 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [400/600 (67%)]	Loss: 0.742996
+2023-05-01 09:01:51.028 | INFO     | models.Update:train:68 - Client #57 Update local model: 4 [500/600 (83%)]	Loss: 1.032614
+2023-05-01 09:01:51.090 | INFO     | models.Update:train:50 - Client #80 for iteration #0 of local training
+2023-05-01 09:01:51.097 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [0/600 (0%)]	Loss: 0.946535
+2023-05-01 09:01:51.166 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [100/600 (17%)]	Loss: 0.723133
+2023-05-01 09:01:51.241 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [200/600 (33%)]	Loss: 1.244042
+2023-05-01 09:01:51.310 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [300/600 (50%)]	Loss: 0.717719
+2023-05-01 09:01:51.379 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [400/600 (67%)]	Loss: 0.457748
+2023-05-01 09:01:51.449 | INFO     | models.Update:train:68 - Client #80 Update local model: 0 [500/600 (83%)]	Loss: 0.999380
+2023-05-01 09:01:51.509 | INFO     | models.Update:train:50 - Client #80 for iteration #1 of local training
+2023-05-01 09:01:51.515 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [0/600 (0%)]	Loss: 0.762966
+2023-05-01 09:01:51.585 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [100/600 (17%)]	Loss: 0.927638
+2023-05-01 09:01:51.653 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [200/600 (33%)]	Loss: 0.784881
+2023-05-01 09:01:51.722 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [300/600 (50%)]	Loss: 1.832313
+2023-05-01 09:01:51.791 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [400/600 (67%)]	Loss: 1.380423
+2023-05-01 09:01:51.861 | INFO     | models.Update:train:68 - Client #80 Update local model: 1 [500/600 (83%)]	Loss: 0.733946
+2023-05-01 09:01:51.924 | INFO     | models.Update:train:50 - Client #80 for iteration #2 of local training
+2023-05-01 09:01:51.931 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [0/600 (0%)]	Loss: 1.039976
+2023-05-01 09:01:52.000 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [100/600 (17%)]	Loss: 0.227923
+2023-05-01 09:01:52.068 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [200/600 (33%)]	Loss: 0.664168
+2023-05-01 09:01:52.135 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [300/600 (50%)]	Loss: 0.732785
+2023-05-01 09:01:52.210 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [400/600 (67%)]	Loss: 0.482051
+2023-05-01 09:01:52.287 | INFO     | models.Update:train:68 - Client #80 Update local model: 2 [500/600 (83%)]	Loss: 0.644209
+2023-05-01 09:01:52.356 | INFO     | models.Update:train:50 - Client #80 for iteration #3 of local training
+2023-05-01 09:01:52.363 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [0/600 (0%)]	Loss: 0.576566
+2023-05-01 09:01:52.452 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [100/600 (17%)]	Loss: 0.557417
+2023-05-01 09:01:52.529 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [200/600 (33%)]	Loss: 0.685516
+2023-05-01 09:01:52.601 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [300/600 (50%)]	Loss: 0.612952
+2023-05-01 09:01:52.675 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [400/600 (67%)]	Loss: 0.682506
+2023-05-01 09:01:52.749 | INFO     | models.Update:train:68 - Client #80 Update local model: 3 [500/600 (83%)]	Loss: 0.527636
+2023-05-01 09:01:52.814 | INFO     | models.Update:train:50 - Client #80 for iteration #4 of local training
+2023-05-01 09:01:52.822 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [0/600 (0%)]	Loss: 1.504205
+2023-05-01 09:01:52.894 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [100/600 (17%)]	Loss: 0.886831
+2023-05-01 09:01:52.967 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [200/600 (33%)]	Loss: 0.949149
+2023-05-01 09:01:53.040 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [300/600 (50%)]	Loss: 0.888787
+2023-05-01 09:01:53.115 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [400/600 (67%)]	Loss: 1.201683
+2023-05-01 09:01:53.187 | INFO     | models.Update:train:68 - Client #80 Update local model: 4 [500/600 (83%)]	Loss: 0.802776
+2023-05-01 09:01:53.256 | INFO     | models.Update:train:50 - Client #14 for iteration #0 of local training
+2023-05-01 09:01:53.263 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [0/600 (0%)]	Loss: 0.780777
+2023-05-01 09:01:53.343 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [100/600 (17%)]	Loss: 1.108419
+2023-05-01 09:01:53.420 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [200/600 (33%)]	Loss: 1.436790
+2023-05-01 09:01:53.494 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [300/600 (50%)]	Loss: 1.534495
+2023-05-01 09:01:53.569 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [400/600 (67%)]	Loss: 1.059924
+2023-05-01 09:01:53.647 | INFO     | models.Update:train:68 - Client #14 Update local model: 0 [500/600 (83%)]	Loss: 1.130427
+2023-05-01 09:01:53.716 | INFO     | models.Update:train:50 - Client #14 for iteration #1 of local training
+2023-05-01 09:01:53.723 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [0/600 (0%)]	Loss: 1.246745
+2023-05-01 09:01:53.808 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [100/600 (17%)]	Loss: 1.151849
+2023-05-01 09:01:53.891 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [200/600 (33%)]	Loss: 0.783832
+2023-05-01 09:01:53.970 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [300/600 (50%)]	Loss: 0.200781
+2023-05-01 09:01:54.044 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [400/600 (67%)]	Loss: 0.566102
+2023-05-01 09:01:54.113 | INFO     | models.Update:train:68 - Client #14 Update local model: 1 [500/600 (83%)]	Loss: 1.700211
+2023-05-01 09:01:54.175 | INFO     | models.Update:train:50 - Client #14 for iteration #2 of local training
+2023-05-01 09:01:54.182 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [0/600 (0%)]	Loss: 0.482840
+2023-05-01 09:01:54.252 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [100/600 (17%)]	Loss: 0.544403
+2023-05-01 09:01:54.322 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [200/600 (33%)]	Loss: 0.590879
+2023-05-01 09:01:54.391 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [300/600 (50%)]	Loss: 0.599163
+2023-05-01 09:01:54.459 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [400/600 (67%)]	Loss: 0.628862
+2023-05-01 09:01:54.529 | INFO     | models.Update:train:68 - Client #14 Update local model: 2 [500/600 (83%)]	Loss: 0.461605
+2023-05-01 09:01:54.591 | INFO     | models.Update:train:50 - Client #14 for iteration #3 of local training
+2023-05-01 09:01:54.597 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [0/600 (0%)]	Loss: 1.055829
+2023-05-01 09:01:54.678 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [100/600 (17%)]	Loss: 0.960674
+2023-05-01 09:01:54.746 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [200/600 (33%)]	Loss: 0.697263
+2023-05-01 09:01:54.815 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [300/600 (50%)]	Loss: 0.440481
+2023-05-01 09:01:54.883 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [400/600 (67%)]	Loss: 0.184779
+2023-05-01 09:01:54.952 | INFO     | models.Update:train:68 - Client #14 Update local model: 3 [500/600 (83%)]	Loss: 0.646173
+2023-05-01 09:01:55.014 | INFO     | models.Update:train:50 - Client #14 for iteration #4 of local training
+2023-05-01 09:01:55.020 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [0/600 (0%)]	Loss: 0.319000
+2023-05-01 09:01:55.098 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [100/600 (17%)]	Loss: 1.849726
+2023-05-01 09:01:55.167 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [200/600 (33%)]	Loss: 0.545807
+2023-05-01 09:01:55.235 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [300/600 (50%)]	Loss: 0.529665
+2023-05-01 09:01:55.304 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [400/600 (67%)]	Loss: 0.698268
+2023-05-01 09:01:55.372 | INFO     | models.Update:train:68 - Client #14 Update local model: 4 [500/600 (83%)]	Loss: 0.670775
+2023-05-01 09:01:55.436 | INFO     | models.Update:train:50 - Client #16 for iteration #0 of local training
+2023-05-01 09:01:55.443 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [0/600 (0%)]	Loss: 0.964352
+2023-05-01 09:01:55.524 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [100/600 (17%)]	Loss: 0.849854
+2023-05-01 09:01:55.593 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [200/600 (33%)]	Loss: 1.292051
+2023-05-01 09:01:55.662 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [300/600 (50%)]	Loss: 1.048315
+2023-05-01 09:01:55.732 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [400/600 (67%)]	Loss: 0.767282
+2023-05-01 09:01:55.803 | INFO     | models.Update:train:68 - Client #16 Update local model: 0 [500/600 (83%)]	Loss: 1.596858
+2023-05-01 09:01:55.866 | INFO     | models.Update:train:50 - Client #16 for iteration #1 of local training
+2023-05-01 09:01:55.872 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [0/600 (0%)]	Loss: 1.061531
+2023-05-01 09:01:55.941 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [100/600 (17%)]	Loss: 0.748417
+2023-05-01 09:01:56.009 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [200/600 (33%)]	Loss: 1.559711
+2023-05-01 09:01:56.080 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [300/600 (50%)]	Loss: 0.681719
+2023-05-01 09:01:56.147 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [400/600 (67%)]	Loss: 0.624376
+2023-05-01 09:01:56.217 | INFO     | models.Update:train:68 - Client #16 Update local model: 1 [500/600 (83%)]	Loss: 1.022028
+2023-05-01 09:01:56.279 | INFO     | models.Update:train:50 - Client #16 for iteration #2 of local training
+2023-05-01 09:01:56.286 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [0/600 (0%)]	Loss: 0.279956
+2023-05-01 09:01:56.353 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [100/600 (17%)]	Loss: 1.498952
+2023-05-01 09:01:56.421 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [200/600 (33%)]	Loss: 0.871803
+2023-05-01 09:01:56.490 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [300/600 (50%)]	Loss: 1.448322
+2023-05-01 09:01:56.558 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [400/600 (67%)]	Loss: 0.631563
+2023-05-01 09:01:56.627 | INFO     | models.Update:train:68 - Client #16 Update local model: 2 [500/600 (83%)]	Loss: 1.102153
+2023-05-01 09:01:56.692 | INFO     | models.Update:train:50 - Client #16 for iteration #3 of local training
+2023-05-01 09:01:56.699 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [0/600 (0%)]	Loss: 0.835239
+2023-05-01 09:01:56.780 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [100/600 (17%)]	Loss: 1.000421
+2023-05-01 09:01:56.856 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [200/600 (33%)]	Loss: 1.052261
+2023-05-01 09:01:56.924 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [300/600 (50%)]	Loss: 1.039556
+2023-05-01 09:01:56.992 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [400/600 (67%)]	Loss: 0.722580
+2023-05-01 09:01:57.062 | INFO     | models.Update:train:68 - Client #16 Update local model: 3 [500/600 (83%)]	Loss: 0.374240
+2023-05-01 09:01:57.122 | INFO     | models.Update:train:50 - Client #16 for iteration #4 of local training
+2023-05-01 09:01:57.129 | INFO     | models.Update:train:68 - Client #16 Update local model: 4 [0/600 (0%)]	Loss: 0.247420
+2023-05-01 09:01:57.212 | INFO     | models.Update:train:68 - Client #16 Update local model: 4 [100/600 (17%)]	Loss: 0.133455
+2023-05-01 09:01:57.282 | INFO     | models.Update:train:68 - Client #16 Update local model: 4 [200/600 (33%)]	Loss: 0.696267
+2023-05-01 09:01:57.349 | INFO     | models.Update:train:68 - Client #16 Update local model: 4 [300/600 (50%)]	Loss: 0.665547
+2023-05-01 09:01:57.419 | INFO     | models.Update:train:68 - Client #16 Update local model: 4 [400/600 (67%)]	Loss: 0.609815
+2023-05-01 09:03:34.095 | INFO     | __main__:<module>:91 - Model : CNNMnist(
+  (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
+  (conv2): Conv2d(10, 20, kernel_size=(5, 5), stride=(1, 1))
+  (conv2_drop): Dropout2d(p=0.5, inplace=False)
+  (fc1): Linear(in_features=320, out_features=50, bias=True)
+  (fc2): Linear(in_features=50, out_features=10, bias=True)
+)
+2023-05-01 09:03:34.096 | INFO     | __main__:<module>:114 - The epochs of training is : 200
+2023-05-01 09:03:34.096 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[55 33 54 52 24  3 79 42 31 69]
+2023-05-01 09:03:34.099 | INFO     | models.Update:train:50 - Client #55 for iteration #0 of local training
+2023-05-01 09:03:34.109 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [0/600 (0%)]	Loss: 2.362185
+2023-05-01 09:03:34.189 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [100/600 (17%)]	Loss: 2.335416
+2023-05-01 09:03:34.255 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [200/600 (33%)]	Loss: 2.359267
+2023-05-01 09:03:34.323 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [300/600 (50%)]	Loss: 2.302068
+2023-05-01 09:03:34.389 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [400/600 (67%)]	Loss: 2.269929
+2023-05-01 09:03:34.456 | INFO     | models.Update:train:68 - Client #55 Update local model: 0 [500/600 (83%)]	Loss: 2.338150
+2023-05-01 09:03:34.516 | INFO     | models.Update:train:50 - Client #55 for iteration #1 of local training
+2023-05-01 09:03:34.523 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [0/600 (0%)]	Loss: 2.253015
+2023-05-01 09:03:34.592 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [100/600 (17%)]	Loss: 2.228570
+2023-05-01 09:03:34.660 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [200/600 (33%)]	Loss: 2.251486
+2023-05-01 09:03:34.727 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [300/600 (50%)]	Loss: 2.246992
+2023-05-01 09:03:34.795 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [400/600 (67%)]	Loss: 2.217422
+2023-05-01 09:03:34.864 | INFO     | models.Update:train:68 - Client #55 Update local model: 1 [500/600 (83%)]	Loss: 2.073328
+2023-05-01 09:03:34.925 | INFO     | models.Update:train:50 - Client #55 for iteration #2 of local training
+2023-05-01 09:03:34.936 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [0/600 (0%)]	Loss: 2.292253
+2023-05-01 09:03:35.016 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [100/600 (17%)]	Loss: 1.980016
+2023-05-01 09:03:35.085 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [200/600 (33%)]	Loss: 2.122977
+2023-05-01 09:03:35.153 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [300/600 (50%)]	Loss: 1.846433
+2023-05-01 09:03:35.221 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [400/600 (67%)]	Loss: 1.840572
+2023-05-01 09:03:35.288 | INFO     | models.Update:train:68 - Client #55 Update local model: 2 [500/600 (83%)]	Loss: 1.746812
+2023-05-01 09:03:35.351 | INFO     | models.Update:train:50 - Client #55 for iteration #3 of local training
+2023-05-01 09:03:35.358 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [0/600 (0%)]	Loss: 1.803271
+2023-05-01 09:03:35.427 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [100/600 (17%)]	Loss: 1.513703
+2023-05-01 09:03:35.494 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [200/600 (33%)]	Loss: 2.142565
+2023-05-01 09:03:35.562 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [300/600 (50%)]	Loss: 1.541696
+2023-05-01 09:03:35.631 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [400/600 (67%)]	Loss: 2.169997
+2023-05-01 09:03:35.698 | INFO     | models.Update:train:68 - Client #55 Update local model: 3 [500/600 (83%)]	Loss: 1.567671
+2023-05-01 09:03:35.761 | INFO     | models.Update:train:50 - Client #55 for iteration #4 of local training
+2023-05-01 09:03:35.767 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [0/600 (0%)]	Loss: 1.219694
+2023-05-01 09:03:35.840 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [100/600 (17%)]	Loss: 0.951634
+2023-05-01 09:03:35.913 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [200/600 (33%)]	Loss: 1.565508
+2023-05-01 09:03:35.982 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [300/600 (50%)]	Loss: 1.197681
+2023-05-01 09:03:36.051 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [400/600 (67%)]	Loss: 1.189837
+2023-05-01 09:03:36.120 | INFO     | models.Update:train:68 - Client #55 Update local model: 4 [500/600 (83%)]	Loss: 1.808557
+2023-05-01 09:03:36.185 | INFO     | models.Update:train:50 - Client #33 for iteration #0 of local training
+2023-05-01 09:03:36.191 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [0/600 (0%)]	Loss: 2.324836
+2023-05-01 09:03:36.271 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [100/600 (17%)]	Loss: 2.384415
+2023-05-01 09:03:36.342 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [200/600 (33%)]	Loss: 2.240057
+2023-05-01 09:03:36.414 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [300/600 (50%)]	Loss: 2.313274
+2023-05-01 09:03:36.487 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [400/600 (67%)]	Loss: 2.237686
+2023-05-01 09:03:36.559 | INFO     | models.Update:train:68 - Client #33 Update local model: 0 [500/600 (83%)]	Loss: 2.318944
+2023-05-01 09:03:36.623 | INFO     | models.Update:train:50 - Client #33 for iteration #1 of local training
+2023-05-01 09:03:36.630 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [0/600 (0%)]	Loss: 2.201072
+2023-05-01 09:03:36.713 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [100/600 (17%)]	Loss: 2.246466
+2023-05-01 09:03:36.791 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [200/600 (33%)]	Loss: 2.158075
+2023-05-01 09:03:36.868 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [300/600 (50%)]	Loss: 2.065771
+2023-05-01 09:03:36.945 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [400/600 (67%)]	Loss: 2.213101
+2023-05-01 09:03:37.020 | INFO     | models.Update:train:68 - Client #33 Update local model: 1 [500/600 (83%)]	Loss: 2.073876
+2023-05-01 09:03:37.092 | INFO     | models.Update:train:50 - Client #33 for iteration #2 of local training
+2023-05-01 09:03:37.099 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [0/600 (0%)]	Loss: 1.996761
+2023-05-01 09:03:37.187 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [100/600 (17%)]	Loss: 1.961282
+2023-05-01 09:03:37.263 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [200/600 (33%)]	Loss: 1.836300
+2023-05-01 09:03:37.337 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [300/600 (50%)]	Loss: 1.740981
+2023-05-01 09:03:37.411 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [400/600 (67%)]	Loss: 1.528293
+2023-05-01 09:03:37.481 | INFO     | models.Update:train:68 - Client #33 Update local model: 2 [500/600 (83%)]	Loss: 1.700143
+2023-05-01 09:03:37.548 | INFO     | models.Update:train:50 - Client #33 for iteration #3 of local training
+2023-05-01 09:03:37.555 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [0/600 (0%)]	Loss: 1.047251
+2023-05-01 09:03:37.636 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [100/600 (17%)]	Loss: 1.085127
+2023-05-01 09:03:37.710 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [200/600 (33%)]	Loss: 1.677429
+2023-05-01 09:03:37.782 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [300/600 (50%)]	Loss: 2.282071
+2023-05-01 09:03:37.856 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [400/600 (67%)]	Loss: 0.894866
+2023-05-01 09:03:37.931 | INFO     | models.Update:train:68 - Client #33 Update local model: 3 [500/600 (83%)]	Loss: 1.297476
+2023-05-01 09:03:38.005 | INFO     | models.Update:train:50 - Client #33 for iteration #4 of local training
+2023-05-01 09:03:38.013 | INFO     | models.Update:train:68 - Client #33 Update local model: 4 [0/600 (0%)]	Loss: 1.604657
+2023-05-01 09:03:38.095 | INFO     | models.Update:train:68 - Client #33 Update local model: 4 [100/600 (17%)]	Loss: 0.975608
+2023-05-01 09:03:38.164 | INFO     | models.Update:train:68 - Client #33 Update local model: 4 [200/600 (33%)]	Loss: 1.154315
+2023-05-01 09:09:43.767 | INFO     | __main__:<module>:91 - Model : CNNMnist(
+  (conv1): Conv2d(1, 10, kernel_size=(5, 5), stride=(1, 1))
+  (conv2): Conv2d(10, 20, kernel_size=(5, 5), stride=(1, 1))
+  (conv2_drop): Dropout2d(p=0.5, inplace=False)
+  (fc1): Linear(in_features=320, out_features=50, bias=True)
+  (fc2): Linear(in_features=50, out_features=10, bias=True)
+)
+2023-05-01 09:09:43.768 | INFO     | __main__:<module>:114 - The epochs of training is : 200
+2023-05-01 09:09:43.768 | INFO     | __main__:<module>:127 - The number of participants elected is: 10,and they are[22 82 60 50 18 37 85 56 62 20]
+2023-05-01 09:09:43.769 | INFO     | __main__:<module>:142 - Client #22 for epoch #0 of local training
+2023-05-01 09:09:43.781 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [0/600 (0%)]	Loss: 2.233022
+2023-05-01 09:09:43.852 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [100/600 (17%)]	Loss: 2.410661
+2023-05-01 09:09:43.920 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [200/600 (33%)]	Loss: 2.232517
+2023-05-01 09:09:43.987 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [300/600 (50%)]	Loss: 2.213328
+2023-05-01 09:09:44.057 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [400/600 (67%)]	Loss: 2.374838
+2023-05-01 09:09:44.134 | INFO     | models.Update:train:68 - Client #22 Update local model: 0 [500/600 (83%)]	Loss: 2.260228
+2023-05-01 09:09:44.208 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [0/600 (0%)]	Loss: 2.172246
+2023-05-01 09:09:44.281 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [100/600 (17%)]	Loss: 2.197388
+2023-05-01 09:09:44.354 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [200/600 (33%)]	Loss: 2.233287
+2023-05-01 09:09:44.423 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [300/600 (50%)]	Loss: 1.934686
+2023-05-01 09:09:44.492 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [400/600 (67%)]	Loss: 2.029645
+2023-05-01 09:09:44.558 | INFO     | models.Update:train:68 - Client #22 Update local model: 1 [500/600 (83%)]	Loss: 1.908715
+2023-05-01 09:09:44.629 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [0/600 (0%)]	Loss: 1.962623
+2023-05-01 09:09:44.699 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [100/600 (17%)]	Loss: 1.781906
+2023-05-01 09:09:44.770 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [200/600 (33%)]	Loss: 1.734893
+2023-05-01 09:09:44.838 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [300/600 (50%)]	Loss: 2.037548
+2023-05-01 09:09:44.907 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [400/600 (67%)]	Loss: 1.361892
+2023-05-01 09:09:44.975 | INFO     | models.Update:train:68 - Client #22 Update local model: 2 [500/600 (83%)]	Loss: 1.260113
+2023-05-01 09:09:45.043 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [0/600 (0%)]	Loss: 1.405137
+2023-05-01 09:09:45.113 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [100/600 (17%)]	Loss: 1.889411
+2023-05-01 09:09:45.183 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [200/600 (33%)]	Loss: 1.771407
+2023-05-01 09:09:45.254 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [300/600 (50%)]	Loss: 1.580675
+2023-05-01 09:09:45.324 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [400/600 (67%)]	Loss: 1.118879
+2023-05-01 09:09:45.392 | INFO     | models.Update:train:68 - Client #22 Update local model: 3 [500/600 (83%)]	Loss: 1.178030
+2023-05-01 09:09:45.459 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [0/600 (0%)]	Loss: 1.242729
+2023-05-01 09:09:45.529 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [100/600 (17%)]	Loss: 1.268063
+2023-05-01 09:09:45.595 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [200/600 (33%)]	Loss: 1.642426
+2023-05-01 09:09:45.662 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [300/600 (50%)]	Loss: 1.187723
+2023-05-01 09:09:45.731 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [400/600 (67%)]	Loss: 1.346595
+2023-05-01 09:09:45.801 | INFO     | models.Update:train:68 - Client #22 Update local model: 4 [500/600 (83%)]	Loss: 1.437317
+2023-05-01 09:09:45.856 | INFO     | __main__:<module>:142 - Client #82 for epoch #0 of local training
+2023-05-01 09:09:45.869 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [0/600 (0%)]	Loss: 2.356140
+2023-05-01 09:09:45.946 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [100/600 (17%)]	Loss: 2.278672
+2023-05-01 09:09:46.019 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [200/600 (33%)]	Loss: 2.377527
+2023-05-01 09:09:46.087 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [300/600 (50%)]	Loss: 2.308267
+2023-05-01 09:09:46.156 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [400/600 (67%)]	Loss: 2.278641
+2023-05-01 09:09:46.227 | INFO     | models.Update:train:68 - Client #82 Update local model: 0 [500/600 (83%)]	Loss: 2.344364
+2023-05-01 09:09:46.301 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [0/600 (0%)]	Loss: 2.234150
+2023-05-01 09:09:46.375 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [100/600 (17%)]	Loss: 2.179777
+2023-05-01 09:09:46.444 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [200/600 (33%)]	Loss: 2.388735
+2023-05-01 09:09:46.512 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [300/600 (50%)]	Loss: 1.997046
+2023-05-01 09:09:46.582 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [400/600 (67%)]	Loss: 2.330598
+2023-05-01 09:09:46.653 | INFO     | models.Update:train:68 - Client #82 Update local model: 1 [500/600 (83%)]	Loss: 2.336063
+2023-05-01 09:09:46.733 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [0/600 (0%)]	Loss: 1.701417
+2023-05-01 09:09:46.802 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [100/600 (17%)]	Loss: 1.730483
+2023-05-01 09:09:46.872 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [200/600 (33%)]	Loss: 1.748145
+2023-05-01 09:09:46.941 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [300/600 (50%)]	Loss: 2.210660
+2023-05-01 09:09:47.011 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [400/600 (67%)]	Loss: 1.573733
+2023-05-01 09:09:47.080 | INFO     | models.Update:train:68 - Client #82 Update local model: 2 [500/600 (83%)]	Loss: 1.476877
+2023-05-01 09:09:47.147 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [0/600 (0%)]	Loss: 1.081633
+2023-05-01 09:09:47.220 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [100/600 (17%)]	Loss: 1.180127
+2023-05-01 09:09:47.290 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [200/600 (33%)]	Loss: 1.555059
+2023-05-01 09:09:47.355 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [300/600 (50%)]	Loss: 1.158729
+2023-05-01 09:09:47.424 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [400/600 (67%)]	Loss: 1.568869
+2023-05-01 09:09:47.491 | INFO     | models.Update:train:68 - Client #82 Update local model: 3 [500/600 (83%)]	Loss: 1.183883
+2023-05-01 09:09:47.560 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [0/600 (0%)]	Loss: 1.011236
+2023-05-01 09:09:47.625 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [100/600 (17%)]	Loss: 2.000064
+2023-05-01 09:09:47.692 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [200/600 (33%)]	Loss: 1.050881
+2023-05-01 09:09:47.763 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [300/600 (50%)]	Loss: 1.385223
+2023-05-01 09:09:47.830 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [400/600 (67%)]	Loss: 1.212270
+2023-05-01 09:09:47.897 | INFO     | models.Update:train:68 - Client #82 Update local model: 4 [500/600 (83%)]	Loss: 1.360533
+2023-05-01 09:09:47.960 | INFO     | __main__:<module>:142 - Client #60 for epoch #0 of local training
+2023-05-01 09:09:47.967 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [0/600 (0%)]	Loss: 2.304210
+2023-05-01 09:09:48.040 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [100/600 (17%)]	Loss: 2.392361
+2023-05-01 09:09:48.117 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [200/600 (33%)]	Loss: 2.306083
+2023-05-01 09:09:48.187 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [300/600 (50%)]	Loss: 2.243462
+2023-05-01 09:09:48.258 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [400/600 (67%)]	Loss: 2.410503
+2023-05-01 09:09:48.326 | INFO     | models.Update:train:68 - Client #60 Update local model: 0 [500/600 (83%)]	Loss: 2.179121
+2023-05-01 09:09:48.391 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [0/600 (0%)]	Loss: 2.227673
+2023-05-01 09:09:48.457 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [100/600 (17%)]	Loss: 2.103844
+2023-05-01 09:09:48.529 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [200/600 (33%)]	Loss: 2.280044
+2023-05-01 09:09:48.597 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [300/600 (50%)]	Loss: 2.086069
+2023-05-01 09:09:48.664 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [400/600 (67%)]	Loss: 2.187389
+2023-05-01 09:09:48.734 | INFO     | models.Update:train:68 - Client #60 Update local model: 1 [500/600 (83%)]	Loss: 2.120462
+2023-05-01 09:09:48.796 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [0/600 (0%)]	Loss: 1.960190
+2023-05-01 09:09:48.870 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [100/600 (17%)]	Loss: 1.552083
+2023-05-01 09:09:48.939 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [200/600 (33%)]	Loss: 2.117944
+2023-05-01 09:09:49.016 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [300/600 (50%)]	Loss: 1.591328
+2023-05-01 09:09:49.087 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [400/600 (67%)]	Loss: 1.944034
+2023-05-01 09:09:49.155 | INFO     | models.Update:train:68 - Client #60 Update local model: 2 [500/600 (83%)]	Loss: 1.404498
+2023-05-01 09:09:49.226 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [0/600 (0%)]	Loss: 2.175558
+2023-05-01 09:09:49.295 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [100/600 (17%)]	Loss: 1.842097
+2023-05-01 09:09:49.365 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [200/600 (33%)]	Loss: 1.458495
+2023-05-01 09:09:49.438 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [300/600 (50%)]	Loss: 1.216789
+2023-05-01 09:09:49.511 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [400/600 (67%)]	Loss: 1.471753
+2023-05-01 09:09:49.585 | INFO     | models.Update:train:68 - Client #60 Update local model: 3 [500/600 (83%)]	Loss: 1.107383
+2023-05-01 09:09:49.655 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [0/600 (0%)]	Loss: 1.758590
+2023-05-01 09:09:49.726 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [100/600 (17%)]	Loss: 1.245609
+2023-05-01 09:09:49.797 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [200/600 (33%)]	Loss: 1.850986
+2023-05-01 09:09:49.872 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [300/600 (50%)]	Loss: 0.756537
+2023-05-01 09:09:49.943 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [400/600 (67%)]	Loss: 1.176320
+2023-05-01 09:09:50.014 | INFO     | models.Update:train:68 - Client #60 Update local model: 4 [500/600 (83%)]	Loss: 1.264066
+2023-05-01 09:09:50.080 | INFO     | __main__:<module>:142 - Client #50 for epoch #0 of local training
+2023-05-01 09:09:50.089 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [0/600 (0%)]	Loss: 2.325411
+2023-05-01 09:09:50.163 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [100/600 (17%)]	Loss: 2.327726
+2023-05-01 09:09:50.235 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [200/600 (33%)]	Loss: 2.260483
+2023-05-01 09:09:50.307 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [300/600 (50%)]	Loss: 2.269770
+2023-05-01 09:09:50.377 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [400/600 (67%)]	Loss: 2.310966
+2023-05-01 09:09:50.447 | INFO     | models.Update:train:68 - Client #50 Update local model: 0 [500/600 (83%)]	Loss: 2.221116
+2023-05-01 09:09:50.515 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [0/600 (0%)]	Loss: 2.302144
+2023-05-01 09:09:50.585 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [100/600 (17%)]	Loss: 2.173177
+2023-05-01 09:09:50.652 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [200/600 (33%)]	Loss: 2.110381
+2023-05-01 09:09:50.724 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [300/600 (50%)]	Loss: 2.250309
+2023-05-01 09:09:50.794 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [400/600 (67%)]	Loss: 2.235502
+2023-05-01 09:09:50.862 | INFO     | models.Update:train:68 - Client #50 Update local model: 1 [500/600 (83%)]	Loss: 2.001907
+2023-05-01 09:09:50.932 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [0/600 (0%)]	Loss: 2.032772
+2023-05-01 09:09:51.000 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [100/600 (17%)]	Loss: 2.258963
+2023-05-01 09:09:51.073 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [200/600 (33%)]	Loss: 2.116143
+2023-05-01 09:09:51.142 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [300/600 (50%)]	Loss: 1.710921
+2023-05-01 09:09:51.212 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [400/600 (67%)]	Loss: 2.024633
+2023-05-01 09:09:51.282 | INFO     | models.Update:train:68 - Client #50 Update local model: 2 [500/600 (83%)]	Loss: 1.518773
+2023-05-01 09:09:51.351 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [0/600 (0%)]	Loss: 1.944433
+2023-05-01 09:09:51.419 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [100/600 (17%)]	Loss: 1.738337
+2023-05-01 09:09:51.488 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [200/600 (33%)]	Loss: 1.918457
+2023-05-01 09:09:51.558 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [300/600 (50%)]	Loss: 1.604294
+2023-05-01 09:09:51.628 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [400/600 (67%)]	Loss: 1.361013
+2023-05-01 09:09:51.694 | INFO     | models.Update:train:68 - Client #50 Update local model: 3 [500/600 (83%)]	Loss: 1.668059
+2023-05-01 09:09:51.769 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [0/600 (0%)]	Loss: 1.720377
+2023-05-01 09:09:51.846 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [100/600 (17%)]	Loss: 1.179162
+2023-05-01 09:09:51.925 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [200/600 (33%)]	Loss: 1.017267
+2023-05-01 09:09:52.005 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [300/600 (50%)]	Loss: 1.572101
+2023-05-01 09:09:52.083 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [400/600 (67%)]	Loss: 1.154280
+2023-05-01 09:09:52.163 | INFO     | models.Update:train:68 - Client #50 Update local model: 4 [500/600 (83%)]	Loss: 1.236879
+2023-05-01 09:09:52.251 | INFO     | __main__:<module>:142 - Client #18 for epoch #0 of local training
+2023-05-01 09:09:52.262 | INFO     | models.Update:train:68 - Client #18 Update local model: 0 [0/600 (0%)]	Loss: 2.341555

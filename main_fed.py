@@ -6,6 +6,7 @@ import pdb
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from loguru import logger
 import copy
 import numpy as np
 from torchvision import datasets, transforms
@@ -18,12 +19,19 @@ from models.Nets import MLP, CNNMnist, CNNCifar
 from models.Fed import FedAvg
 from models.test import test_img
 from utils import save_results
+from utils import generate_experiment_ids
 
 
 if __name__ == '__main__':
     # parse args
     args = args_parser()
     args.device = torch.device('cuda:{}'.format(args.gpu) if torch.cuda.is_available() and args.gpu != -1 else 'cpu')
+
+    #Initialize logger
+    files = generate_experiment_ids(3000, 1)
+    # 把实验的日志存储到该文件中
+    handler = logger.add(files[0][0], enqueue=True)
+
     #主要步骤
     # 1 数据分发
     # 2 模型创建
@@ -80,7 +88,7 @@ if __name__ == '__main__':
         net_glob = MLP(dim_in=len_in, dim_hidden=200, dim_out=args.num_classes).to(args.device)
     else:
         exit('Error: unrecognized model')
-    print(net_glob)
+    logger.info("Model : {}".format(net_glob))
     # 注意这不是在进行模型的训练，而是要切换到训练模式
     # 在这里我们有两种模式，一个是训练模式，一个是测试模式
     # 区别就在于，测试的时候是不需要记录每一批数据的均值和方差的，也不需要进行误差等的计算；而训练模式需要信息的收集，以此来进行误差计算，更新模型
@@ -99,9 +107,11 @@ if __name__ == '__main__':
     val_acc_list, net_list = [], []
 
     if args.all_clients: 
-        print("Aggregation over all clients")
+        # print("Aggregation over all clients")
+        logger.info("Aggregation over all clients")
         w_locals = [w_glob for i in range(args.num_users)]
     # 进行模型的训练，在这里我们定义的epoch是10
+    logger.info("The epochs of training is : {}".format(args.epochs))
     for iter in range(args.epochs):
         # 在每一个epoch都要进行如下的操作
         # 首先定义一个client的损失函数
@@ -114,7 +124,7 @@ if __name__ == '__main__':
         # 2 如果所有用户同时训练的情况下，并不能够保证所有用户在同一时刻都是在线的状态
         m = max(int(args.frac * args.num_users), 1) # args.frac * args.num_users = 0.1 * 100 = 10
         idxs_users = np.random.choice(range(args.num_users), m, replace=False)
-
+        logger.info("The number of participants elected is: {},and they are{}".format(len(idxs_users),idxs_users))
         """
             idxs_users 为 选出的 可以参与联邦训练的参与者列表
             接下来根据idxs_users这个列表开始操作，len(idxs_users)为 m
@@ -126,10 +136,10 @@ if __name__ == '__main__':
             完整的训练集进行抽样，形成某一个客户端的本地数据集
         """
         for idx in idxs_users:
-
             # 生成一个LocalUpdate实例，主要完成数据集划分的工作
-            local = LocalUpdate(args=args, dataset=dataset_train, idxs=dict_users[idx])
+            local = LocalUpdate(args=args, dataset=dataset_train, idxs=dict_users[idx],clientId = idx)
             # 训练完之后返回 w 和loss
+            logger.info("Client #{} for epoch #{} training".format(local.clientId,iter+1))
             w, loss = local.train(net=copy.deepcopy(net_glob).to(args.device))
             if args.all_clients:
                 # w_locals的作用就是把每一个用户的w 都复制过来
@@ -148,7 +158,8 @@ if __name__ == '__main__':
 
         # print loss
         loss_avg = sum(loss_locals) / len(loss_locals)
-        print('Round {:3d}, Average loss {:.3f}'.format(iter+1, loss_avg))
+        logger.info('Round {:3d}, Average loss {:.3f}'.format(iter+1, loss_avg))
+        # print('Round {:3d}, Average loss {:.3f}'.format(iter+1, loss_avg))
         # 将每一个epoch的损失记录下来
         loss_train.append(loss_avg)
 
@@ -165,6 +176,8 @@ if __name__ == '__main__':
     net_glob.eval()
     acc_train, loss_train = test_img(net_glob, dataset_train, args)
     acc_test, loss_test = test_img(net_glob, dataset_test, args)
-    print("Training accuracy: {:.2f}".format(acc_train))
-    print("Testing accuracy: {:.2f}".format(acc_test))
+    logger.info("Training accuracy: {:.2f}".format(acc_train))
+    logger.info("Testing accuracy: {:.2f}".format(acc_test))
+    # print("Training accuracy: {:.2f}".format(acc_train))
+    # print("Testing accuracy: {:.2f}".format(acc_test))
 
